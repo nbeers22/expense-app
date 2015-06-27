@@ -5682,3 +5682,1026 @@ Processing by HomeController#index as HTML
   Rendered home/index.html.erb within layouts/application (0.5ms)
   Rendered layouts/_navbar.html.erb (0.3ms)
 Completed 200 OK in 271ms (Views: 270.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-06-26 22:19:45 -0400
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/macbook/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/macbook/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:567:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/macbook/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/macbook/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/macbook/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (102.7ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (76.5ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (178.4ms)
+
+
+Started GET "/" for ::1 at 2015-06-26 22:20:41 -0400
+
+ActiveRecord::NoDatabaseError (FATAL:  database "template_development" does not exist
+):
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:661:in `rescue in connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/macbook/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/macbook/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:567:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/macbook/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/macbook/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/macbook/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (93.9ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (75.2ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (2.1ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (176.8ms)
+  [1m[36m (4.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (2.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20150327191717)
+  [1m[35m (0.3ms)[0m  BEGIN
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/macbook/projects/expense-app/db/migrate/20150327191717_devise_create_users.rb:34)
+  [1m[36m (8.6ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (2.1ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150327191717"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+Migrating to AddFirstNameToUsers (20150327194125)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "first_name" character varying[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150327194125"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to AddLastNameToUsers (20150327194154)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "last_name" character varying[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150327194154"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateAdminUsers (20150327201606)
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/macbook/projects/expense-app/db/migrate/20150327201606_devise_create_admin_users.rb:40)
+  [1m[36m (4.1ms)[0m  [1mCREATE TABLE "admin_users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX  "index_admin_users_on_email" ON "admin_users"  ("email")
+  [1m[36m (1.9ms)[0m  [1mCREATE UNIQUE INDEX  "index_admin_users_on_reset_password_token" ON "admin_users"  ("reset_password_token")[0m
+  [1m[35mAdminUser Exists (0.8ms)[0m  SELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = 'admin@example.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$10$bATv.DyIrTXCIKlvlQCOJ..M5BVlJvUq/UTOBHCZUT7F1B2H6TZIi"], ["created_at", "2015-06-27 02:21:15.991840"], ["updated_at", "2015-06-27 02:21:15.991840"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150327201606"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateActiveAdminComments (20150327201609)
+  [1m[35m (0.3ms)[0m  BEGIN
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /Users/macbook/projects/expense-app/db/migrate/20150327201609_create_active_admin_comments.rb:9)
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "active_admin_comments" ("id" serial primary key, "namespace" character varying, "body" text, "resource_id" character varying NOT NULL, "resource_type" character varying NOT NULL, "author_id" integer, "author_type" character varying, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (2.7ms)[0m  CREATE  INDEX  "index_active_admin_comments_on_namespace" ON "active_admin_comments"  ("namespace")
+  [1m[36m (1.6ms)[0m  [1mCREATE  INDEX  "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments"  ("author_type", "author_id")[0m
+  [1m[35m (1.2ms)[0m  CREATE  INDEX  "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments"  ("resource_type", "resource_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150327201609"]]
+  [1m[35m (2.7ms)[0m  COMMIT
+Migrating to CreateActivities (20150627021529)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.5ms)[0m  CREATE TABLE "activities" ("id" serial primary key, "title" text, "expense_type" text, "amount" decimal, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX  "index_activities_on_user_id" ON "activities"  ("user_id")[0m
+  [1m[35m (4.2ms)[0m  ALTER TABLE "activities" ADD CONSTRAINT "fk_rails_7e11bb717f"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150627021529"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'active_admin_comments'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'activities'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'admin_users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for ::1 at 2015-06-26 22:21:22 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+Completed 200 OK in 3631ms (Views: 3596.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-99f0cb2ce2e4e4340ea460aa792bca22.css?body=1" for ::1 at 2015-06-26 22:21:25 -0400
+
+
+Started GET "/assets/bootstrap.min-484001edd3aaff13a1432b245414aaab.js?body=1" for ::1 at 2015-06-26 22:21:25 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-06-26 22:21:25 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-06-26 22:21:25 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-06-26 22:21:25 -0400
+
+
+Started GET "/assets/bootstrap.min-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-06-26 22:21:25 -0400
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for ::1 at 2015-06-26 22:21:25 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for ::1 at 2015-06-26 22:21:25 -0400
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for ::1 at 2015-06-26 22:21:25 -0400
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for ::1 at 2015-06-26 22:21:25 -0400
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for ::1 at 2015-06-26 22:21:26 -0400
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for ::1 at 2015-06-26 22:21:26 -0400
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for ::1 at 2015-06-26 22:21:26 -0400
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for ::1 at 2015-06-26 22:21:26 -0400
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for ::1 at 2015-06-26 22:21:26 -0400
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for ::1 at 2015-06-26 22:21:26 -0400
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for ::1 at 2015-06-26 22:21:26 -0400
+
+
+Started GET "/assets/active_admin/base-404cff38e51d44cfd48b2bb7ec8a119f.js?body=1" for ::1 at 2015-06-26 22:21:26 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions-5706928449a7d192adcb4c959b623cf6.js?body=1" for ::1 at 2015-06-26 22:21:26 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler-71efe70af420ba0aef07b4e19fc2fc06.js?body=1" for ::1 at 2015-06-26 22:21:26 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu-0d4c387b749f3fc1d71179e523ab4e49.js?body=1" for ::1 at 2015-06-26 22:21:26 -0400
+
+
+Started GET "/assets/active_admin/lib/flash-a3dc1386603709c2a6501741817b1ca8.js?body=1" for ::1 at 2015-06-26 22:21:26 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many-64f8975fc252419139c3a62d16c53777.js?body=1" for ::1 at 2015-06-26 22:21:26 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog-400dfa6502091f82a5e3941b8a771c46.js?body=1" for ::1 at 2015-06-26 22:21:26 -0400
+
+
+Started GET "/assets/active_admin/lib/per_page-239488a1a0b13f3cda3dddf002b6ed21.js?body=1" for ::1 at 2015-06-26 22:21:26 -0400
+
+
+Started GET "/assets/active_admin/lib/popover-4659964ef0ff6b1465b40769d440f87a.js?body=1" for ::1 at 2015-06-26 22:21:26 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler-18530342f84893188506c0a48a10be15.js?body=1" for ::1 at 2015-06-26 22:21:26 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui-5963f9f0bd7887f07217b87c96e27f88.js?body=1" for ::1 at 2015-06-26 22:21:26 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-22727936bd5e807603d51c2a59b45b7d.js?body=1" for ::1 at 2015-06-26 22:21:26 -0400
+
+
+Started GET "/assets/active_admin/application-05696a26e5d54a1514c12845c4392189.js?body=1" for ::1 at 2015-06-26 22:21:26 -0400
+
+
+Started GET "/assets/active_admin-582c705223b6cd57525db0105ddd5028.js?body=1" for ::1 at 2015-06-26 22:21:26 -0400
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-06-26 22:21:26 -0400
+
+
+Started GET "/assets/application-9b4770971cbbc8343324304de37d75c1.js?body=1" for ::1 at 2015-06-26 22:21:26 -0400
+
+
+Started GET "/users/sign_up" for ::1 at 2015-06-26 22:24:16 -0400
+Processing by Users::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (298.9ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 587ms (Views: 567.9ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/users" for ::1 at 2015-06-26 22:24:31 -0400
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bJMrzI1FPeIDs0ReCLVS3s6dwaGNWeTHoR88JgRz46haJA2rPl1WTxnZgNQ6lPyIsHCUh2XcQaUxER50TWV9aQ==", "user"=>{"first_name"=>"nate", "last_name"=>"Beers", "email"=>"nbeers22@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.9ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'nbeers22@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["first_name", "nate"], ["last_name", "Beers"], ["email", "nbeers22@gmail.com"], ["encrypted_password", "$2a$10$ogVa2OaeQR43dzH8Pm/KW.EOxoCqXgiieAZUFoXjCk2NNo3jku8ia"], ["created_at", "2015-06-27 02:24:31.744571"], ["updated_at", "2015-06-27 02:24:31.744571"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["last_sign_in_at", "2015-06-27 02:24:31.749377"], ["current_sign_in_at", "2015-06-27 02:24:31.749377"], ["last_sign_in_ip", "::1/128"], ["current_sign_in_ip", "::1/128"], ["sign_in_count", 1], ["updated_at", "2015-06-27 02:24:31.750791"], ["id", 1]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 217ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/" for ::1 at 2015-06-26 22:24:31 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 258ms (Views: 257.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-06-26 22:26:05 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 266ms (Views: 264.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application-99f0cb2ce2e4e4340ea460aa792bca22.css?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/bootstrap.min-484001edd3aaff13a1432b245414aaab.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/bootstrap.min-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/active_admin/base-404cff38e51d44cfd48b2bb7ec8a119f.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler-71efe70af420ba0aef07b4e19fc2fc06.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu-0d4c387b749f3fc1d71179e523ab4e49.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions-5706928449a7d192adcb4c959b623cf6.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/active_admin/lib/flash-a3dc1386603709c2a6501741817b1ca8.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many-64f8975fc252419139c3a62d16c53777.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog-400dfa6502091f82a5e3941b8a771c46.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/active_admin/lib/per_page-239488a1a0b13f3cda3dddf002b6ed21.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/active_admin/lib/popover-4659964ef0ff6b1465b40769d440f87a.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler-18530342f84893188506c0a48a10be15.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui-5963f9f0bd7887f07217b87c96e27f88.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-22727936bd5e807603d51c2a59b45b7d.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/active_admin/application-05696a26e5d54a1514c12845c4392189.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/active_admin-582c705223b6cd57525db0105ddd5028.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/assets/application-9b4770971cbbc8343324304de37d75c1.js?body=1" for ::1 at 2015-06-26 22:26:05 -0400
+
+
+Started GET "/users/edit" for ::1 at 2015-06-26 22:26:14 -0400
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (181.5ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 465ms (Views: 461.1ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/users" for ::1 at 2015-06-26 22:26:29 -0400
+Processing by Users::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YkU/kZMntaeSDVqg3Z3sM7xfoXQPSGx7SkFvCM6nDitU8hn2ID/eCohnnirvvEJlwrL0UufNyRnaT01ah7GQ6g==", "user"=>{"first_name"=>"Nate", "last_name"=>"Beers", "email"=>"nbeers22@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update User"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "first_name" = $1, "encrypted_password" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["first_name", "Nate"], ["encrypted_password", "$2a$10$3wJ1YYkiFFB0gUzLfvGIlu9YWUlemsiI7oZvplSYZejLJN5p3FSOe"], ["updated_at", "2015-06-27 02:26:30.244310"], ["id", 1]]
+  [1m[35m (1.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 285ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/" for ::1 at 2015-06-26 22:26:30 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 261ms (Views: 259.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap.min-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/application-99f0cb2ce2e4e4340ea460aa792bca22.css?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/bootstrap.min-484001edd3aaff13a1432b245414aaab.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/active_admin/base-404cff38e51d44cfd48b2bb7ec8a119f.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions-5706928449a7d192adcb4c959b623cf6.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler-71efe70af420ba0aef07b4e19fc2fc06.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu-0d4c387b749f3fc1d71179e523ab4e49.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/active_admin/lib/flash-a3dc1386603709c2a6501741817b1ca8.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many-64f8975fc252419139c3a62d16c53777.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog-400dfa6502091f82a5e3941b8a771c46.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/active_admin/lib/per_page-239488a1a0b13f3cda3dddf002b6ed21.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/active_admin/lib/popover-4659964ef0ff6b1465b40769d440f87a.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler-18530342f84893188506c0a48a10be15.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui-5963f9f0bd7887f07217b87c96e27f88.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-22727936bd5e807603d51c2a59b45b7d.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/active_admin/application-05696a26e5d54a1514c12845c4392189.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/active_admin-582c705223b6cd57525db0105ddd5028.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/assets/application-9b4770971cbbc8343324304de37d75c1.js?body=1" for ::1 at 2015-06-26 22:26:30 -0400
+
+
+Started GET "/" for ::1 at 2015-06-26 22:27:18 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 262ms (Views: 260.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application-99f0cb2ce2e4e4340ea460aa792bca22.css?body=1" for ::1 at 2015-06-26 22:27:18 -0400
+
+
+Started GET "/assets/bootstrap.min-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-06-26 22:27:18 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-06-26 22:27:18 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-06-26 22:27:18 -0400
+
+
+Started GET "/assets/bootstrap.min-484001edd3aaff13a1432b245414aaab.js?body=1" for ::1 at 2015-06-26 22:27:18 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-06-26 22:27:18 -0400
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for ::1 at 2015-06-26 22:27:18 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for ::1 at 2015-06-26 22:27:18 -0400
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/active_admin/base-404cff38e51d44cfd48b2bb7ec8a119f.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions-5706928449a7d192adcb4c959b623cf6.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler-71efe70af420ba0aef07b4e19fc2fc06.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu-0d4c387b749f3fc1d71179e523ab4e49.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/active_admin/lib/flash-a3dc1386603709c2a6501741817b1ca8.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many-64f8975fc252419139c3a62d16c53777.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog-400dfa6502091f82a5e3941b8a771c46.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/active_admin/lib/per_page-239488a1a0b13f3cda3dddf002b6ed21.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/active_admin/lib/popover-4659964ef0ff6b1465b40769d440f87a.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler-18530342f84893188506c0a48a10be15.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui-5963f9f0bd7887f07217b87c96e27f88.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-22727936bd5e807603d51c2a59b45b7d.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/active_admin/application-05696a26e5d54a1514c12845c4392189.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/application-9b4770971cbbc8343324304de37d75c1.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/assets/active_admin-582c705223b6cd57525db0105ddd5028.js?body=1" for ::1 at 2015-06-26 22:27:19 -0400
+
+
+Started GET "/" for ::1 at 2015-06-26 22:27:35 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 259ms (Views: 257.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application-99f0cb2ce2e4e4340ea460aa792bca22.css?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/bootstrap.min-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/bootstrap.min-484001edd3aaff13a1432b245414aaab.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/active_admin/base-404cff38e51d44cfd48b2bb7ec8a119f.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions-5706928449a7d192adcb4c959b623cf6.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler-71efe70af420ba0aef07b4e19fc2fc06.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu-0d4c387b749f3fc1d71179e523ab4e49.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/active_admin/lib/flash-a3dc1386603709c2a6501741817b1ca8.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many-64f8975fc252419139c3a62d16c53777.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog-400dfa6502091f82a5e3941b8a771c46.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/active_admin/lib/per_page-239488a1a0b13f3cda3dddf002b6ed21.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/active_admin/lib/popover-4659964ef0ff6b1465b40769d440f87a.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler-18530342f84893188506c0a48a10be15.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui-5963f9f0bd7887f07217b87c96e27f88.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-22727936bd5e807603d51c2a59b45b7d.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/active_admin/application-05696a26e5d54a1514c12845c4392189.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/active_admin-582c705223b6cd57525db0105ddd5028.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/assets/application-9b4770971cbbc8343324304de37d75c1.js?body=1" for ::1 at 2015-06-26 22:27:35 -0400
+
+
+Started GET "/" for ::1 at 2015-06-26 22:36:01 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (25.3ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 2.2ms)
+
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"activities"} missing required keys: [:user_id]):
+     8: 				Welcome <%= current_user.first_name.titleize %>!
+     9: 			<% end %>
+    10: 		</p>
+    11: 		<p><%= link_to "Add an Activity", new_user_activity_path %></p>
+    12: 
+    13: 		
+    14: 	</div>
+  app/views/home/index.html.erb:11:in `_app_views_home_index_html_erb__4610833688946110614_70176801222720'
+
+
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.2ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (103.9ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (74.7ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (169.8ms)
+
+
+Started GET "/" for ::1 at 2015-06-26 22:36:27 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 256ms (Views: 254.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/activities/new" for ::1 at 2015-06-26 22:36:29 -0400
+
+ActionController::RoutingError (uninitialized constant ActivitiesController):
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/macbook/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/macbook/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/macbook/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.7ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.0ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (154.7ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (73.9ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (161.7ms)
+
+
+Started GET "/users/1/activities/new" for ::1 at 2015-06-26 22:36:30 -0400
+
+ActionController::RoutingError (uninitialized constant ActivitiesController):
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/macbook/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/macbook/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/macbook/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.1ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (135.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (69.8ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (158.2ms)
