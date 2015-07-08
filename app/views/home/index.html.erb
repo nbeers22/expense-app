@@ -6,9 +6,9 @@
 				<%= link_to 'Click here', new_user_registration_path  %> to create an account or  <%= link_to 'click here',  new_user_session_path  %> to Sign in.
 			<% else %>
 				Welcome <%= current_user.first_name.titleize %>!
+				<p><%= link_to "Add an Activity", new_user_activity_path(current_user) %></p>
 			<% end %>
 		</p>
-		<p><%= link_to "Add an Activity", new_user_activity_path(current_user) %></p>
 
 		
 	</div>
