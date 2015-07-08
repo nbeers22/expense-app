@@ -4,29 +4,32 @@ class ActivitiesController < ApplicationController
 	end
 
 	def create
-		@user = current_user
+		@user = User.find(params[:user_id])
 		@activity = @user.activities.create(activities_params)
-		if @activity.save
-			redirect back
-		end
+		redirect_to :root
 	end
 
 	def index
-		@activities = Activity.all
+		user = User.find(params[:user_id])
+		@activities = user.activities
 	end
 
 	def edit
-		@activity = Activity.find(params: id)
+		@activity = Activity.find(params[:id])
 	end
 
 	def update
-		@activity = Activity.find(params: id)
+		@activity = Activity.find(params[:id])
 		@activity.update_attributes
 	end
 
 	def destroy
-		@activity = Activity.find(params: id)
-		@activity.destroy
+		# @activity = Activity.find(params[:id]
+		# @activity.destroy
+	end
+
+	def show
+
 	end
 
 	private

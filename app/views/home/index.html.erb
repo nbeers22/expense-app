@@ -7,6 +7,23 @@
 			<% else %>
 				Welcome <%= current_user.first_name.titleize %>!
 				<p><%= link_to "Add an Activity", new_user_activity_path(current_user) %></p>
+				<div class="panel panel-default">
+				  <!-- Default panel contents -->
+				    <div class="panel-heading">Financial Activities</div>
+					<table class="activity-list">
+						<th>Date</th>
+						<th>Activity</th>
+						<th>Expense Type</th>
+						<th>Amount</th>
+						<% @activities.each do |activity| %>
+						<tr>
+							<td><%= activity.created_at.strftime("%b %d, %Y") %></td>
+							<td><%= activity.title %></td>
+							<td><%= activity.expense_type %></td>
+							<td><%= number_to_currency(activity.amount) %></td>
+						</tr>
+						<% end %>
+					</table>
 			<% end %>
 		</p>
 
