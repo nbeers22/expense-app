@@ -3,9 +3,9 @@
 		<h1>Expense Tracker</h1>
 		<p class="lead">
 			<% unless user_signed_in?  %>
-				<%= link_to 'Click here', new_user_registration_path  %> to create an account or  <%= link_to 'click here',  new_user_session_path  %> to Sign in.
+				<%= link_to 'Click here', new_user_registration_path  %> to create an account or  <%= link_to 'click here',  new_user_session_path  %> to Sign in.</p>
 			<% else %>
-				Welcome <%= current_user.first_name.titleize %>!
+				Welcome <%= current_user.first_name.titleize %>!</p>
 				<p><%= link_to "Add an Activity", new_user_activity_path(current_user) %></p>
 				<div class="panel panel-default">
 				  <!-- Default panel contents -->
@@ -15,18 +15,22 @@
 						<th>Activity</th>
 						<th>Expense Type</th>
 						<th>Amount</th>
-						<% @activities.each do |activity| %>
-						<tr>
-							<td><%= activity.created_at.strftime("%b %d, %Y") %></td>
-							<td><%= activity.title %></td>
-							<td><%= activity.expense_type %></td>
-							<td><%= number_to_currency(activity.amount) %></td>
-						</tr>
+						<% if @activities %>
+							<% @activities.each do |activity| %>
+							<tr>
+								<td><%= activity.created_at.strftime("%b %d, %Y") %></td>
+								<td><%= activity.title %></td>
+								<td><%= activity.expense_type %></td>
+								<td><%= number_to_currency(activity.amount) %></td>
+							</tr>
+							<% end %>
 						<% end %>
 					</table>
+				</div>
+				<div class="total">
+					<p>Debits: <%= number_to_currency(@debits) %></p>
+					<p>Credits: <%= number_to_currency(@credits) %></p>
+				</div>
 			<% end %>
-		</p>
-
-		
 	</div>
 </div>
