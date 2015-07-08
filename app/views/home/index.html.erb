@@ -15,6 +15,7 @@
 						<th>Activity</th>
 						<th>Expense Type</th>
 						<th>Amount</th>
+						<th>Edit | Delete</th>
 						<% if @activities %>
 							<% @activities.each do |activity| %>
 							<tr>
@@ -22,14 +23,22 @@
 								<td><%= activity.title %></td>
 								<td><%= activity.expense_type %></td>
 								<td><%= number_to_currency(activity.amount) %></td>
+								<td>
+								<%= link_to edit_user_activity_path(current_user,activity) do %>
+									<button class="btn btn-warning">Edit</button>
+								<% end %>
+								<%= link_to user_activity_path(current_user,activity), method: :delete do  %>
+									<button class="btn btn-danger">Delete</button>
+								<% end %>
+								</td>
 							</tr>
 							<% end %>
 						<% end %>
 					</table>
 				</div>
 				<div class="total">
-					<p>Debits: <%= number_to_currency(@debits) %></p>
-					<p>Credits: <%= number_to_currency(@credits) %></p>
+					<p>Debits: <%= if @debits != nil then number_to_currency(@debits) else number_to_currency(0) end%></p>
+					<p>Credits: <%= if @credits != nil then number_to_currency(@credits) else number_to_currency(0) end%></p>
 				</div>
 			<% end %>
 	</div>

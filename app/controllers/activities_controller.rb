@@ -15,21 +15,20 @@ class ActivitiesController < ApplicationController
 	end
 
 	def edit
-		@activity = Activity.find(params[:id])
+		@user = User.find(params[:user_id])
+		@activity = @user.activities.find(params[:id])
 	end
 
 	def update
 		@activity = Activity.find(params[:id])
-		@activity.update_attributes
+		@activity.update_attributes(activities_params)
+		redirect_to :root
 	end
 
 	def destroy
-		# @activity = Activity.find(params[:id]
-		# @activity.destroy
-	end
-
-	def show
-
+		@activity = Activity.find(params[:id])
+		@activity.destroy
+		redirect_to :root
 	end
 
 	private
