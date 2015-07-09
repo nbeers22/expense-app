@@ -1,24 +1,68 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$m: 10px;
+$thead-color: #E6E6B3;
+
 .none {
 	display:none;
 }
 
-.activity-list {
-	th,td {
-		padding: 10px;
-	}
+h3 {
+	margin: 0;
+}
+
+.total-head {
+	margin-bottom: $m;
+}
+
+.no-pad {
+	padding-left:0;
+	padding-right:0;
 }
 
 .panel {
 	margin-bottom: 0;
-	.plus,.minus {
-		padding: 20px;
-		cursor: pointer;
+	.panel-heading {
+		height: 50px;
+		.plus,.minus {
+			padding: 0px 30px;
+			font-size: 30px;
+			font-weight: bold;
+			cursor: pointer;
+			position: relative;
+			bottom: 8px;
+		}
+	}
+	
+	
+	.activity-list {
+		th,td {
+			padding: $m;
+		}
+		thead {
+			tr {
+				background-color: $thead-color;
+			}
+		}
+		tbody {
+			tr:nth-child(odd) {
+				background-color: #FFFF99;
+			}
+			tr:nth-child(even) {
+				background-color: #FFFFCC;
+			}
+		}
 	}
 }
 
 .total {
-	padding: 10px 10px;
+	padding: $m $m;
+}
+
+.inner-container {
+	border: 1px solid #DDDDDD;
+	padding: 15px;
+	background-color: #F5F5F5;
+	border-radius: 5px;
 }
