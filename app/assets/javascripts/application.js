@@ -12,6 +12,32 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require velocity.min
+//= require velocity.ui.min
 //= require bootstrap.min
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+	slideTableDown();
+	slideTableUp();
+});
+
+var slideTableDown = function(){
+	$('span.plus').on('click',function(){
+		$(this).addClass('none');
+		$(this).next('span').removeClass('none');
+		$(this).parent().parent().parent().find('table').velocity('transition.perspectiveDownIn');
+		$(this).parent().parent().parent().parent().find('.total').velocity('transition.swoopIn');
+	});
+};
+
+var slideTableUp = function(){
+	$('span.minus').on('click',function(){
+		$(this).addClass('none');
+		$(this).prev('span').removeClass('none');
+		$(this).parent().parent().parent().find('table').velocity('transition.perspectiveDownOut');
+		$(this).parent().parent().parent().parent().find('.total').velocity('transition.swoopOut');
+
+	});
+};

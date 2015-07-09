@@ -1,9 +1,24 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.none {
+	display:none;
+}
 
 .activity-list {
 	th,td {
 		padding: 10px;
 	}
+}
+
+.panel {
+	margin-bottom: 0;
+	.plus,.minus {
+		padding: 20px;
+		cursor: pointer;
+	}
+}
+
+.total {
+	padding: 10px 10px;
 }

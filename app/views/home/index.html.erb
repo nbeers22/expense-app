@@ -7,41 +7,122 @@
 			<% else %>
 				Welcome <%= current_user.first_name.titleize %>!</p>
 				<p><%= link_to "Add an Activity", new_user_activity_path(current_user) %></p>
-				<div class="panel panel-default">
-				  <!-- Default panel contents -->
-				    <div class="panel-heading">Financial Activities</div>
-					<table class="activity-list">
-						<th>Date</th>
-						<th>Activity</th>
-						<th>Type</th>
-						<th>Category</th>
-						<th>Amount</th>
-						<th>Edit | Delete</th>
-						<% if @activities %>
-							<% @activities.each do |activity| %>
-							<tr>
-								<td><%= activity.created_at.strftime("%b %d, %Y") %></td>
-								<td><%= activity.title %></td>
-								<td><%= activity.expense_type %></td>
-								<td><%= activity.category %></td>
-								<td><%= number_to_currency(activity.amount) %></td>
-								<td>
-								<%= link_to edit_user_activity_path(current_user,activity) do %>
-									<button class="btn btn-warning">Edit</button>
-								<% end %>
-								<%= link_to user_activity_path(current_user,activity), method: :delete do  %>
-									<button class="btn btn-danger">Delete</button>
-								<% end %>
-								</td>
-							</tr>
-							<% end %>
-						<% end %>
-					</table>
-				</div>
-				<div class="total">
-					<p>Debits: <%= if @debits != nil then number_to_currency(@debits) else number_to_currency(0) end%></p>
-					<p>Credits: <%= if @credits != nil then number_to_currency(@credits) else number_to_currency(0) end%></p>
-				</div>
-			<% end %>
 	</div>
+	<div class="col-sm-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3>Bills <span class="plus">+</span><span class="minus none">-</span></h3>
+			</div>
+			<table class="activity-list none">
+				<th>Date</th>
+				<th>Activity</th>
+				<th>Type</th>
+				<th>Category</th>
+				<th>Amount</th>
+				<th>Edit | Delete</th>
+				<% if @bills %>
+					<% @bills.each do |bill| %>
+						<tr>
+							<td><%= bill.created_at.strftime("%b %d, %Y") %></td>
+							<td><%= bill.title %></td>
+							<td><%= bill.expense_type %></td>
+							<td><%= bill.category %></td>
+							<td><%= number_to_currency(bill.amount) %></td>
+							<td>
+							<%= link_to edit_user_activity_path(current_user,bill) do %>
+								<button class="btn btn-warning">Edit</button>
+							<% end %>
+							<%= link_to user_activity_path(current_user,bill), method: :delete do  %>
+								<button class="btn btn-danger">Delete</button>
+							<% end %>
+							</td>
+						</tr>
+					<% end %>
+				<% end %>
+			</table>
+		</div>
+		<div class="total none">
+			<h3>Total</h3>
+			<p>Debits: <%= if @bills_debit != nil then number_to_currency(@bills_debit) else number_to_currency(0) end%></p>
+			<p>Credits: <%= if @bills_credit != nil then number_to_currency(@bills_credit) else number_to_currency(0) end%></p>
+		</div>
+	</div>
+	<div class="col-sm-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3>Business <span class="plus">+</span><span class="minus none">-</span></h3>
+			</div>
+			<table class="activity-list none">
+				<th>Date</th>
+				<th>Activity</th>
+				<th>Type</th>
+				<th>Category</th>
+				<th>Amount</th>
+				<th>Edit | Delete</th>
+				<% if @businesses %>
+					<% @businesses.each do |business| %>
+						<tr>
+							<td><%= business.created_at.strftime("%b %d, %Y") %></td>
+							<td><%= business.title %></td>
+							<td><%= business.expense_type %></td>
+							<td><%= business.category %></td>
+							<td><%= number_to_currency(business.amount) %></td>
+							<td>
+							<%= link_to edit_user_activity_path(current_user,business) do %>
+								<button class="btn btn-warning">Edit</button>
+							<% end %>
+							<%= link_to user_activity_path(current_user,business), method: :delete do  %>
+								<button class="btn btn-danger">Delete</button>
+							<% end %>
+							</td>
+						</tr>
+					<% end %>
+				<% end %>
+			</table>
+		</div>
+		<div class="total none">
+			<h3>Total</h3>
+			<p>Debits: <%= if @businesses_debit != nil then number_to_currency(@businesses_debit) else number_to_currency(0) end%></p>
+			<p>Credits: <%= if @businesses_credit != nil then number_to_currency(@businesses_credit) else number_to_currency(0) end%></p>
+		</div>
+	</div>
+	<div class="col-sm-12">
+		<div class="panel panel-default">
+		  <!-- Default panel contents -->
+		    <div class="panel-heading"><h3>Complete Financial Activity</h3></div>
+			<table class="activity-list">
+				<th>Date</th>
+				<th>Activity</th>
+				<th>Type</th>
+				<th>Category</th>
+				<th>Amount</th>
+				<th>Edit | Delete</th>
+				<% if @activities %>
+					<% @activities.each do |activity| %>
+					<tr>
+						<td><%= activity.created_at.strftime("%b %d, %Y") %></td>
+						<td><%= activity.title %></td>
+						<td><%= activity.expense_type %></td>
+						<td><%= activity.category %></td>
+						<td><%= number_to_currency(activity.amount) %></td>
+						<td>
+						<%= link_to edit_user_activity_path(current_user,activity) do %>
+							<button class="btn btn-warning">Edit</button>
+						<% end %>
+						<%= link_to user_activity_path(current_user,activity), method: :delete do  %>
+							<button class="btn btn-danger">Delete</button>
+						<% end %>
+						</td>
+					</tr>
+					<% end %>
+				<% end %>
+			</table>
+		</div>
+		<div class="total">
+			<h3>Total</h3>
+			<p>Debits: <%= if @debits != nil then number_to_currency(@debits) else number_to_currency(0) end%></p>
+			<p>Credits: <%= if @credits != nil then number_to_currency(@credits) else number_to_currency(0) end%></p>
+		</div>
+	</div>
+			<% end %>
 </div>
