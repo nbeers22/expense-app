@@ -584,6 +584,50 @@
 		</div>
 		<div class="col-sm-12">
 			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="pull-left">Other</h3>
+					<span class="plus pull-right">+</span><span class="minus pull-right none">-</span>
+				</div>
+				<table class="activity-list none">
+					<thead>
+						<th>Date</th>
+						<th>Activity</th>
+						<th>Type</th>
+						<th>Category</th>
+						<th>Amount</th>
+						<th>Edit | Delete</th>
+					</thead>
+					<tbody>
+					<% if @other %>
+						<% @other.each do |o| %>
+							<tr>
+								<td><%= o.created_at.strftime("%b %d, %Y") %></td>
+								<td><%= o.title %></td>
+								<td><%= o.expense_type %></td>
+								<td><%= o.category %></td>
+								<td><%= number_to_currency(o.amount) %></td>
+								<td>
+								<%= link_to edit_user_activity_path(current_user,o) do %>
+									<button class="btn btn-warning">Edit</button>
+								<% end %>
+								<%= link_to user_activity_path(current_user,o), method: :delete do  %>
+									<button class="btn btn-danger">Delete</button>
+								<% end %>
+								</td>
+							</tr>
+						<% end %>
+					<% end %>
+					</tbody>
+				</table>
+			</div>
+			<div class="total none">
+				<h3>Total</h3>
+				<p>Debits: <%= if @other_debit != nil then number_to_currency(@other_debit) else number_to_currency(0) end%></p>
+				<p>Credits: <%= if @other_credit != nil then number_to_currency(@other_credit) else number_to_currency(0) end%></p>
+			</div>
+		</div>
+		<div class="col-sm-12">
+			<div class="panel panel-default">
 			  <!-- Default panel contents -->
 			    <div class="panel-heading"><h3>Complete Financial Activity</h3></div>
 				<table class="activity-list">

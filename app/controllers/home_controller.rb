@@ -57,6 +57,10 @@ class HomeController < ApplicationController
 			@vehicles = user.activities.where(category: "Vehicle")
 			@vehicles_debit = vehicle_debit
 			@vehicles_credit = vehicle_credit
+
+			@other = user.activities.where(category: "Other")
+			@other_debit = other_debit
+			@other_credit = other_credit
 		end
 	end
 
@@ -190,6 +194,16 @@ class HomeController < ApplicationController
 	def vehicle_credit
 		user = current_user
 		user.activities.where(expense_type: "Credit", category: "Vehicle").pluck(:amount).inject(:+)
+	end
+
+	def other_debit
+		user = current_user
+		user.activities.where(expense_type: "Credit", category: "Other").pluck(:amount).inject(:+)
+	end
+
+	def other_credit
+		user = current_user
+		user.activities.where(expense_type: "Credit", category: "Other").pluck(:amount).inject(:+)
 	end
 
 	def total_debit
