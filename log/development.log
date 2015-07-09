@@ -38561,3 +38561,823 @@ Processing by HomeController#index as HTML
   Rendered home/index.html.erb within layouts/application (22.5ms)
   Rendered layouts/_navbar.html.erb (0.2ms)
 Completed 200 OK in 194ms (Views: 174.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for ::1 at 2015-07-09 16:32:31 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2[0m  [["user_id", 1], ["expense_type", "Debit"]]
+  [1m[35m (0.1ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2  [["user_id", 1], ["expense_type", "Credit"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Debit"], ["category", "Bills"]]
+  [1m[35m (0.1ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Bills"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Business"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Business"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Clothing"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Clothing"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Food"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Food"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Household Supplies"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Household Supplies"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Medical"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Medical"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Personal"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Personal"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Pets"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Pets"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Rent/Mortgage"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Rent/Mortgage"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Vacation"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Vacation"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Vehicle"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Vehicle"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Other"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Other"]]
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Bills"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Business"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Clothing"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Food"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Gas"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Home Repair"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Household Supplies"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Medical"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Personal"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Pets"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Rent/Mortgage"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Vacation"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Vehicle"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Other"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered home/index.html.erb within layouts/application (30.9ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 2947ms (Views: 2927.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/application.self-940939753efc5d84fa55a2b510be0bb6b10332179c359fae389881c9c862ea2f.css?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/bootstrap.min.self-2c354d7c0179bd35563b93633b23ac5fb07c67d531d40a75695bacbd0eadb799.css?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/main.self-7db87ce110e7124ee195f3c867cfe51feee0ac612cdec91dec8dc1b61dae7c26.css?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/velocity.min.self-b01240ce1811a86e98a242cf1710553d1db34655f36b1e4ed745a7dc125db0ca.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/velocity.ui.min.self-7eb0fb50fef4c9360bad1ba0aff65d07650b55ebb1491bb03868dd101f533715.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/jquery-ui/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker.self-6267be6d4d0f0e8665be3b4d6ac07f40ba23a32aff8eaa5d1bfc00f76a9eeae7.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/jquery-ui/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/jquery-ui/button.self-4d4f21ba77bbf8cc08ae65e2b6329a7a1b952b32c3ba7bffca8313e7e8c93d0c.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/jquery-ui/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/jquery-ui/draggable.self-debcca3d0d5d9afe2fe91a6fd1aebdb41ca0a55f2f6017352e6c02b6d8a6e64c.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/jquery-ui/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/jquery-ui/resizable.self-60b870565f3cd62982c1907828119bb51f42ec8228d5e23868153edc3abc685c.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/jquery-ui/dialog.self-5a6c7980dfa3f6b74445b0f4b20eed799ee65363163500ed7f032e603d6b022d.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/jquery-ui/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/jquery-ui/tabs.self-dc07b44bf1b926c8d28ccd2658e30933881e5329348caf70cf305c3943f6bbd7.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/active_admin/base.self-ab2cb3098b53fe7d229937d768d701e8f4013f2a5aea7988d8f2149fa40426db.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.self-10ee4c07784b00259ca97a02c4e7fb53c1b27ebe5653a3b910426b4ea0941250.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.self-ffdc88fc1b3b6bcfac3e314f191fc486175ab5a4b5daab87af6bd208cb483bd8.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.self-161387c54d1640bd9f174301b77d73ea88ce6d7daf0d7356bd50b4d0143d1b72.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/active_admin/lib/flash.self-8f05a5d9328ea28fca100b057787fbfb567986513c5f1735ea48fad8f9571c10.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.self-ece319debdc01ca5096ae8ac6c130ffc0decab382543b4b94e18591375d3d3bb.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.self-0e86d9de4b99cb242de337a342f957f4872f686afc40f31f32d855672b1cd878.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/active_admin/lib/per_page.self-d7697643296439a8f6aadbf22a229d8ce9b4e8e530ca854164398141006bcfda.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.self-f5200d732ec9ffd4ee8fd1fe11524ad7b54a67f6c0ef447a29d119ece2dcecdb.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.self-f96f2ec2a32c4bc4da4292cc74bddeca0bb223d81a421c98c4d613632860945e.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.self-da8dafbbe883092bcae73f35a8caf4ae6170fe7d8130ae7039a233f9b509c757.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/active_admin/application.self-50ffc9f86e474cd52ffb7ce3b3572255ad6646ea17097a056f330b540eae402c.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/active_admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/activities.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/assets/application.self-b7ff51cb9099202c3f034329f6440edbf24bc35e7e7e62072d925fc188c5400d.js?body=1" for ::1 at 2015-07-09 16:32:34 -0400
+
+
+Started GET "/" for ::1 at 2015-07-09 16:46:57 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2[0m  [["user_id", 1], ["expense_type", "Debit"]]
+  [1m[35m (0.1ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2  [["user_id", 1], ["expense_type", "Credit"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Debit"], ["category", "Bills"]]
+  [1m[35m (0.1ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Bills"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Business"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Business"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Clothing"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Clothing"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Food"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Food"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Household Supplies"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Household Supplies"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Medical"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Medical"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Personal"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Personal"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Pets"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Pets"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Rent/Mortgage"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Rent/Mortgage"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Vacation"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Vacation"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Vehicle"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Vehicle"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Other"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Other"]]
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Bills"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Business"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Clothing"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Food"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Gas"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Home Repair"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Household Supplies"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Medical"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Personal"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Pets"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Rent/Mortgage"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Vacation"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Vehicle"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Other"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered home/index.html.erb within layouts/application (24.2ms)
+  Rendered layouts/_navbar.html.erb (0.2ms)
+Completed 200 OK in 334ms (Views: 311.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/application.self-940939753efc5d84fa55a2b510be0bb6b10332179c359fae389881c9c862ea2f.css?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/bootstrap.min.self-2c354d7c0179bd35563b93633b23ac5fb07c67d531d40a75695bacbd0eadb799.css?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/main.self-7db87ce110e7124ee195f3c867cfe51feee0ac612cdec91dec8dc1b61dae7c26.css?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/velocity.ui.min.self-7eb0fb50fef4c9360bad1ba0aff65d07650b55ebb1491bb03868dd101f533715.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/velocity.min.self-b01240ce1811a86e98a242cf1710553d1db34655f36b1e4ed745a7dc125db0ca.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/jquery-ui/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker.self-6267be6d4d0f0e8665be3b4d6ac07f40ba23a32aff8eaa5d1bfc00f76a9eeae7.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/jquery-ui/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/jquery-ui/button.self-4d4f21ba77bbf8cc08ae65e2b6329a7a1b952b32c3ba7bffca8313e7e8c93d0c.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/jquery-ui/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/jquery-ui/draggable.self-debcca3d0d5d9afe2fe91a6fd1aebdb41ca0a55f2f6017352e6c02b6d8a6e64c.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/jquery-ui/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/jquery-ui/resizable.self-60b870565f3cd62982c1907828119bb51f42ec8228d5e23868153edc3abc685c.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/application.self-eabb541fc23bdc26904475f2938c5f2a55298830dfc4bfa74046fea6ea5872c5.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/jquery-ui/dialog.self-5a6c7980dfa3f6b74445b0f4b20eed799ee65363163500ed7f032e603d6b022d.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/jquery-ui/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/jquery-ui/tabs.self-dc07b44bf1b926c8d28ccd2658e30933881e5329348caf70cf305c3943f6bbd7.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/active_admin/base.self-ab2cb3098b53fe7d229937d768d701e8f4013f2a5aea7988d8f2149fa40426db.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.self-10ee4c07784b00259ca97a02c4e7fb53c1b27ebe5653a3b910426b4ea0941250.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.self-ffdc88fc1b3b6bcfac3e314f191fc486175ab5a4b5daab87af6bd208cb483bd8.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.self-161387c54d1640bd9f174301b77d73ea88ce6d7daf0d7356bd50b4d0143d1b72.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/active_admin/lib/flash.self-8f05a5d9328ea28fca100b057787fbfb567986513c5f1735ea48fad8f9571c10.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.self-ece319debdc01ca5096ae8ac6c130ffc0decab382543b4b94e18591375d3d3bb.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.self-0e86d9de4b99cb242de337a342f957f4872f686afc40f31f32d855672b1cd878.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/active_admin/lib/per_page.self-d7697643296439a8f6aadbf22a229d8ce9b4e8e530ca854164398141006bcfda.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.self-f5200d732ec9ffd4ee8fd1fe11524ad7b54a67f6c0ef447a29d119ece2dcecdb.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.self-f96f2ec2a32c4bc4da4292cc74bddeca0bb223d81a421c98c4d613632860945e.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.self-da8dafbbe883092bcae73f35a8caf4ae6170fe7d8130ae7039a233f9b509c757.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/active_admin/application.self-50ffc9f86e474cd52ffb7ce3b3572255ad6646ea17097a056f330b540eae402c.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/active_admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/activities.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-09 16:46:58 -0400
+
+
+Started GET "/" for ::1 at 2015-07-09 16:47:18 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2[0m  [["user_id", 1], ["expense_type", "Debit"]]
+  [1m[35m (0.1ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2  [["user_id", 1], ["expense_type", "Credit"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Debit"], ["category", "Bills"]]
+  [1m[35m (0.1ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Bills"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Business"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Business"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Clothing"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Clothing"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Food"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Food"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Household Supplies"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Household Supplies"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Medical"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Medical"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Personal"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Personal"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Pets"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Pets"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Rent/Mortgage"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Rent/Mortgage"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Vacation"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Vacation"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Vehicle"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Vehicle"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Other"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Other"]]
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Bills"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Business"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Clothing"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Food"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Gas"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Home Repair"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Household Supplies"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Medical"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Personal"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Pets"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Rent/Mortgage"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Vacation"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Vehicle"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Other"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered home/index.html.erb within layouts/application (23.4ms)
+  Rendered layouts/_navbar.html.erb (0.2ms)
+Completed 200 OK in 222ms (Views: 202.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/application.self-940939753efc5d84fa55a2b510be0bb6b10332179c359fae389881c9c862ea2f.css?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/bootstrap.min.self-2c354d7c0179bd35563b93633b23ac5fb07c67d531d40a75695bacbd0eadb799.css?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/velocity.min.self-b01240ce1811a86e98a242cf1710553d1db34655f36b1e4ed745a7dc125db0ca.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/main.self-7db87ce110e7124ee195f3c867cfe51feee0ac612cdec91dec8dc1b61dae7c26.css?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/velocity.ui.min.self-7eb0fb50fef4c9360bad1ba0aff65d07650b55ebb1491bb03868dd101f533715.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/jquery-ui/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker.self-6267be6d4d0f0e8665be3b4d6ac07f40ba23a32aff8eaa5d1bfc00f76a9eeae7.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/jquery-ui/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/jquery-ui/button.self-4d4f21ba77bbf8cc08ae65e2b6329a7a1b952b32c3ba7bffca8313e7e8c93d0c.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/jquery-ui/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/jquery-ui/draggable.self-debcca3d0d5d9afe2fe91a6fd1aebdb41ca0a55f2f6017352e6c02b6d8a6e64c.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/jquery-ui/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/jquery-ui/resizable.self-60b870565f3cd62982c1907828119bb51f42ec8228d5e23868153edc3abc685c.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/jquery-ui/dialog.self-5a6c7980dfa3f6b74445b0f4b20eed799ee65363163500ed7f032e603d6b022d.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/jquery-ui/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/jquery-ui/tabs.self-dc07b44bf1b926c8d28ccd2658e30933881e5329348caf70cf305c3943f6bbd7.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/active_admin/base.self-ab2cb3098b53fe7d229937d768d701e8f4013f2a5aea7988d8f2149fa40426db.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.self-10ee4c07784b00259ca97a02c4e7fb53c1b27ebe5653a3b910426b4ea0941250.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.self-ffdc88fc1b3b6bcfac3e314f191fc486175ab5a4b5daab87af6bd208cb483bd8.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.self-161387c54d1640bd9f174301b77d73ea88ce6d7daf0d7356bd50b4d0143d1b72.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/active_admin/lib/flash.self-8f05a5d9328ea28fca100b057787fbfb567986513c5f1735ea48fad8f9571c10.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.self-ece319debdc01ca5096ae8ac6c130ffc0decab382543b4b94e18591375d3d3bb.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.self-0e86d9de4b99cb242de337a342f957f4872f686afc40f31f32d855672b1cd878.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/active_admin/lib/per_page.self-d7697643296439a8f6aadbf22a229d8ce9b4e8e530ca854164398141006bcfda.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.self-f5200d732ec9ffd4ee8fd1fe11524ad7b54a67f6c0ef447a29d119ece2dcecdb.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.self-f96f2ec2a32c4bc4da4292cc74bddeca0bb223d81a421c98c4d613632860945e.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.self-da8dafbbe883092bcae73f35a8caf4ae6170fe7d8130ae7039a233f9b509c757.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/active_admin/application.self-50ffc9f86e474cd52ffb7ce3b3572255ad6646ea17097a056f330b540eae402c.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/active_admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/activities.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/assets/application.self-b7ff51cb9099202c3f034329f6440edbf24bc35e7e7e62072d925fc188c5400d.js?body=1" for ::1 at 2015-07-09 16:47:18 -0400
+
+
+Started GET "/" for ::1 at 2015-07-09 16:47:47 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2[0m  [["user_id", 1], ["expense_type", "Debit"]]
+  [1m[35m (0.1ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2  [["user_id", 1], ["expense_type", "Credit"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Debit"], ["category", "Bills"]]
+  [1m[35m (0.1ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Bills"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Business"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Business"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Clothing"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Clothing"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Food"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Food"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Household Supplies"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Household Supplies"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Medical"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Medical"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Personal"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Personal"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Pets"]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Pets"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Rent/Mortgage"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Rent/Mortgage"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Vacation"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Vacation"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Vehicle"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Vehicle"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Other"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Other"]]
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Bills"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Business"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Clothing"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Food"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Gas"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Home Repair"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Household Supplies"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Medical"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Personal"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Pets"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Rent/Mortgage"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Vacation"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Vehicle"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Other"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered home/index.html.erb within layouts/application (22.1ms)
+  Rendered layouts/_navbar.html.erb (0.2ms)
+Completed 200 OK in 293ms (Views: 272.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/application.self-940939753efc5d84fa55a2b510be0bb6b10332179c359fae389881c9c862ea2f.css?body=1" for ::1 at 2015-07-09 16:47:47 -0400
+
+
+Started GET "/assets/velocity.min.self-b01240ce1811a86e98a242cf1710553d1db34655f36b1e4ed745a7dc125db0ca.js?body=1" for ::1 at 2015-07-09 16:47:47 -0400
+
+
+Started GET "/assets/main.self-7db87ce110e7124ee195f3c867cfe51feee0ac612cdec91dec8dc1b61dae7c26.css?body=1" for ::1 at 2015-07-09 16:47:47 -0400
+
+
+Started GET "/assets/bootstrap.min.self-2c354d7c0179bd35563b93633b23ac5fb07c67d531d40a75695bacbd0eadb799.css?body=1" for ::1 at 2015-07-09 16:47:47 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-09 16:47:47 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-09 16:47:47 -0400
+
+
+Started GET "/assets/velocity.ui.min.self-7eb0fb50fef4c9360bad1ba0aff65d07650b55ebb1491bb03868dd101f533715.js?body=1" for ::1 at 2015-07-09 16:47:47 -0400
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-07-09 16:47:47 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-09 16:47:47 -0400
+
+
+Started GET "/assets/jquery-ui/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js?body=1" for ::1 at 2015-07-09 16:47:47 -0400
+
+
+Started GET "/assets/application.self-9ac0be3455b4347668adca39804d72c63a1cf3113091cfc27c8fc9c3869ddbe9.js?body=1" for ::1 at 2015-07-09 16:47:47 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker.self-6267be6d4d0f0e8665be3b4d6ac07f40ba23a32aff8eaa5d1bfc00f76a9eeae7.js?body=1" for ::1 at 2015-07-09 16:47:47 -0400
+
+
+Started GET "/assets/jquery-ui/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js?body=1" for ::1 at 2015-07-09 16:47:47 -0400
+
+
+Started GET "/assets/jquery-ui/button.self-4d4f21ba77bbf8cc08ae65e2b6329a7a1b952b32c3ba7bffca8313e7e8c93d0c.js?body=1" for ::1 at 2015-07-09 16:47:47 -0400
+
+
+Started GET "/assets/jquery-ui/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js?body=1" for ::1 at 2015-07-09 16:47:47 -0400
+
+
+Started GET "/assets/jquery-ui/draggable.self-debcca3d0d5d9afe2fe91a6fd1aebdb41ca0a55f2f6017352e6c02b6d8a6e64c.js?body=1" for ::1 at 2015-07-09 16:47:47 -0400
+
+
+Started GET "/assets/jquery-ui/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js?body=1" for ::1 at 2015-07-09 16:47:47 -0400
+
+
+Started GET "/assets/jquery-ui/resizable.self-60b870565f3cd62982c1907828119bb51f42ec8228d5e23868153edc3abc685c.js?body=1" for ::1 at 2015-07-09 16:47:47 -0400
+
+
+Started GET "/assets/jquery-ui/dialog.self-5a6c7980dfa3f6b74445b0f4b20eed799ee65363163500ed7f032e603d6b022d.js?body=1" for ::1 at 2015-07-09 16:47:47 -0400
+
+
+Started GET "/assets/jquery-ui/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js?body=1" for ::1 at 2015-07-09 16:47:47 -0400
+
+
+Started GET "/assets/jquery-ui/tabs.self-dc07b44bf1b926c8d28ccd2658e30933881e5329348caf70cf305c3943f6bbd7.js?body=1" for ::1 at 2015-07-09 16:47:47 -0400
+
+
+Started GET "/assets/active_admin/base.self-ab2cb3098b53fe7d229937d768d701e8f4013f2a5aea7988d8f2149fa40426db.js?body=1" for ::1 at 2015-07-09 16:47:47 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.self-10ee4c07784b00259ca97a02c4e7fb53c1b27ebe5653a3b910426b4ea0941250.js?body=1" for ::1 at 2015-07-09 16:47:48 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.self-ffdc88fc1b3b6bcfac3e314f191fc486175ab5a4b5daab87af6bd208cb483bd8.js?body=1" for ::1 at 2015-07-09 16:47:48 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.self-161387c54d1640bd9f174301b77d73ea88ce6d7daf0d7356bd50b4d0143d1b72.js?body=1" for ::1 at 2015-07-09 16:47:48 -0400
+
+
+Started GET "/assets/active_admin/lib/flash.self-8f05a5d9328ea28fca100b057787fbfb567986513c5f1735ea48fad8f9571c10.js?body=1" for ::1 at 2015-07-09 16:47:48 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.self-ece319debdc01ca5096ae8ac6c130ffc0decab382543b4b94e18591375d3d3bb.js?body=1" for ::1 at 2015-07-09 16:47:48 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.self-0e86d9de4b99cb242de337a342f957f4872f686afc40f31f32d855672b1cd878.js?body=1" for ::1 at 2015-07-09 16:47:48 -0400
+
+
+Started GET "/assets/active_admin/lib/per_page.self-d7697643296439a8f6aadbf22a229d8ce9b4e8e530ca854164398141006bcfda.js?body=1" for ::1 at 2015-07-09 16:47:48 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.self-f5200d732ec9ffd4ee8fd1fe11524ad7b54a67f6c0ef447a29d119ece2dcecdb.js?body=1" for ::1 at 2015-07-09 16:47:48 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.self-f96f2ec2a32c4bc4da4292cc74bddeca0bb223d81a421c98c4d613632860945e.js?body=1" for ::1 at 2015-07-09 16:47:48 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.self-da8dafbbe883092bcae73f35a8caf4ae6170fe7d8130ae7039a233f9b509c757.js?body=1" for ::1 at 2015-07-09 16:47:48 -0400
+
+
+Started GET "/assets/active_admin/application.self-50ffc9f86e474cd52ffb7ce3b3572255ad6646ea17097a056f330b540eae402c.js?body=1" for ::1 at 2015-07-09 16:47:48 -0400
+
+
+Started GET "/assets/active_admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-09 16:47:48 -0400
+
+
+Started GET "/assets/activities.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-09 16:47:48 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-09 16:47:48 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-09 16:47:48 -0400
+
+
+Started GET "/" for ::1 at 2015-07-09 16:48:09 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2[0m  [["user_id", 1], ["expense_type", "Debit"]]
+  [1m[35m (0.1ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2  [["user_id", 1], ["expense_type", "Credit"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Debit"], ["category", "Bills"]]
+  [1m[35m (0.1ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Bills"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Business"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Business"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Clothing"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Clothing"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Food"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Food"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Household Supplies"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Household Supplies"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Medical"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Medical"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Personal"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Personal"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Pets"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Pets"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Rent/Mortgage"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Rent/Mortgage"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Vacation"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Vacation"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Vehicle"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Vehicle"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 1], ["expense_type", "Credit"], ["category", "Other"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 1], ["expense_type", "Credit"], ["category", "Other"]]
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Bills"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Business"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Clothing"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Food"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Gas"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Home Repair"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Household Supplies"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Medical"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Personal"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Pets"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Rent/Mortgage"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Vacation"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 1], ["category", "Vehicle"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 1], ["category", "Other"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered home/index.html.erb within layouts/application (21.6ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 287ms (Views: 267.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/application.self-940939753efc5d84fa55a2b510be0bb6b10332179c359fae389881c9c862ea2f.css?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/bootstrap.min.self-2c354d7c0179bd35563b93633b23ac5fb07c67d531d40a75695bacbd0eadb799.css?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/main.self-7db87ce110e7124ee195f3c867cfe51feee0ac612cdec91dec8dc1b61dae7c26.css?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/velocity.min.self-b01240ce1811a86e98a242cf1710553d1db34655f36b1e4ed745a7dc125db0ca.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/velocity.ui.min.self-7eb0fb50fef4c9360bad1ba0aff65d07650b55ebb1491bb03868dd101f533715.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/jquery-ui/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker.self-6267be6d4d0f0e8665be3b4d6ac07f40ba23a32aff8eaa5d1bfc00f76a9eeae7.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/jquery-ui/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/jquery-ui/button.self-4d4f21ba77bbf8cc08ae65e2b6329a7a1b952b32c3ba7bffca8313e7e8c93d0c.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/application.self-bafa8ec3c9f5e62752c63eb4579ba7cc075b205ede4d02cb1028565b1705e951.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/jquery-ui/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/jquery-ui/draggable.self-debcca3d0d5d9afe2fe91a6fd1aebdb41ca0a55f2f6017352e6c02b6d8a6e64c.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/jquery-ui/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/jquery-ui/resizable.self-60b870565f3cd62982c1907828119bb51f42ec8228d5e23868153edc3abc685c.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/jquery-ui/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/jquery-ui/dialog.self-5a6c7980dfa3f6b74445b0f4b20eed799ee65363163500ed7f032e603d6b022d.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/jquery-ui/tabs.self-dc07b44bf1b926c8d28ccd2658e30933881e5329348caf70cf305c3943f6bbd7.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/active_admin/base.self-ab2cb3098b53fe7d229937d768d701e8f4013f2a5aea7988d8f2149fa40426db.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.self-10ee4c07784b00259ca97a02c4e7fb53c1b27ebe5653a3b910426b4ea0941250.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.self-ffdc88fc1b3b6bcfac3e314f191fc486175ab5a4b5daab87af6bd208cb483bd8.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.self-161387c54d1640bd9f174301b77d73ea88ce6d7daf0d7356bd50b4d0143d1b72.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/active_admin/lib/flash.self-8f05a5d9328ea28fca100b057787fbfb567986513c5f1735ea48fad8f9571c10.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.self-ece319debdc01ca5096ae8ac6c130ffc0decab382543b4b94e18591375d3d3bb.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.self-0e86d9de4b99cb242de337a342f957f4872f686afc40f31f32d855672b1cd878.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/active_admin/lib/per_page.self-d7697643296439a8f6aadbf22a229d8ce9b4e8e530ca854164398141006bcfda.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.self-f5200d732ec9ffd4ee8fd1fe11524ad7b54a67f6c0ef447a29d119ece2dcecdb.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.self-f96f2ec2a32c4bc4da4292cc74bddeca0bb223d81a421c98c4d613632860945e.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.self-da8dafbbe883092bcae73f35a8caf4ae6170fe7d8130ae7039a233f9b509c757.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/active_admin/application.self-50ffc9f86e474cd52ffb7ce3b3572255ad6646ea17097a056f330b540eae402c.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/active_admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/activities.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-09 16:48:09 -0400

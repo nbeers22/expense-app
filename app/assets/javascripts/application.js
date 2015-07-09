@@ -28,7 +28,7 @@ var slideTableDown = function(){
 		$(this).addClass('none');
 		$(this).next('span').removeClass('none');
 		$(this).parent().parent().find('table').velocity('transition.perspectiveDownIn');
-		$(this).parent().parent().parent().find('.total').velocity('transition.swoopIn');
+		$(this).parent().parent().parent().find('.total').velocity('transition.perspectiveUpIn');
 	});
 };
 
@@ -37,7 +37,7 @@ var slideTableUp = function(){
 		$(this).addClass('none');
 		$(this).prev('span').removeClass('none');
 		$(this).parent().parent().find('table').velocity('transition.perspectiveDownOut');
-		$(this).parent().parent().parent().find('.total').velocity('transition.swoopOut');
+		$(this).parent().parent().parent().find('.total').velocity('transition.perspectiveUpOut');
 
 	});
 };
