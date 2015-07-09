@@ -6,7 +6,10 @@
 				<%= f.input :title, label: "",placeholder: "Expense Name", input_html: {class: "form-control"} %>
 			</div>
 			<div class="form-group">
-				<%= f.input :expense_type, label: "",prompt: "Expense Type", collection: ["Debit","Credit"], input_html: {class: "form-control"} %>
+				<%= f.input :expense_type, label: "",prompt: "Type", collection: ["Debit","Credit"], input_html: {class: "form-control"} %>
+			</div>
+			<div class="form-group">
+				<%= f.input :category, label: "", prompt: "Category",collection: ["Bills","Business","Clothing","Food","Gas","Household Supplies","Medical","Personal","Pets","Rent/Mortgage","Vacation","Vehicle"], input_html: {class: "form-control"} %>
 			</div>
 			<div class="form-group">
 				<%= f.input :amount, label: "",placeholder: "Amount", input_html: {class: "form-control"}, required: false %>

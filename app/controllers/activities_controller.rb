@@ -1,36 +1,32 @@
 class ActivitiesController < ApplicationController
 	before_action :find_user, only: [:create,:edit,:index]
+	before_action :find_activity, only: [:update,:destroy]
 
 	def new
 		@activity = Activity.new
 	end
 
 	def create
-		# @user = User.find(params[:user_id])
 		@activity = @user.activities.create(activities_params)
-		redirect_to :root
+		root
 	end
 
 	def index
-		# user = User.find(params[:user_id])
 		@activities = user.activities
 	end
 
 	def edit
-		# @user = User.find(params[:user_id])
 		@activity = @user.activities.find(params[:id])
 	end
 
 	def update
-		@activity = Activity.find(params[:id])
 		@activity.update_attributes(activities_params)
-		redirect_to :root
+		root
 	end
 
 	def destroy
-		@activity = Activity.find(params[:id])
 		@activity.destroy
-		redirect_to :root
+		root
 	end
 
 	private
@@ -39,7 +35,15 @@ class ActivitiesController < ApplicationController
 		@user = User.find(params[:user_id])
 	end
 
+	def find_activity
+		@activity = Activity.find(params[:id])
+	end
+
+	def root
+		redirect_to :root
+	end
+
 	def activities_params
-		params.require(:activity).permit(:title, :expense_type, :amount)
+		params.require(:activity).permit(:title, :expense_type, :amount, :category)
 	end
 end

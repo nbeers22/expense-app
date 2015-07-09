@@ -1,4 +1,3 @@
-
 <h1>Add a new financial activity</h1>
 <div id="new-activity-form">
 	<%= simple_form_for [current_user, current_user.activities.build] do |f| %>
@@ -7,6 +6,9 @@
 		</div>
 		<div class="form-group">
 			<%= f.input :expense_type, label: "",prompt: "Expense Type", collection: ["Debit","Credit"], input_html: {class: "form-control"} %>
+		</div>
+		<div class="form-group">
+			<%= f.input :category, label: "", prompt: "Category",collection: ["Bills","Business","Clothing","Food","Gas","Household Supplies","Medical","Personal","Pets","Rent/Mortgage","Vacation","Vehicle"], input_html: {class: "form-control"} %>
 		</div>
 		<div class="form-group">
 			<%= f.input :amount, label: "",placeholder: "Amount", input_html: {class: "form-control"}, required: false %>
