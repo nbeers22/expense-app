@@ -1,35 +1,43 @@
 class ActivitiesController < ApplicationController
+	before_action :find_user, only: [:create,:edit,:index]
+
 	def new
 		@activity = Activity.new
 	end
 
 	def create
-		@user = current_user
+		# @user = User.find(params[:user_id])
 		@activity = @user.activities.create(activities_params)
-		if @activity.save
-			redirect back
-		end
+		redirect_to :root
 	end
 
 	def index
-		@activities = Activity.all
+		# user = User.find(params[:user_id])
+		@activities = user.activities
 	end
 
 	def edit
-		@activity = Activity.find(params: id)
+		# @user = User.find(params[:user_id])
+		@activity = @user.activities.find(params[:id])
 	end
 
 	def update
-		@activity = Activity.find(params: id)
-		@activity.update_attributes
+		@activity = Activity.find(params[:id])
+		@activity.update_attributes(activities_params)
+		redirect_to :root
 	end
 
 	def destroy
-		@activity = Activity.find(params: id)
+		@activity = Activity.find(params[:id])
 		@activity.destroy
+		redirect_to :root
 	end
 
 	private
+
+	def find_user
+		@user = User.find(params[:user_id])
+	end
 
 	def activities_params
 		params.require(:activity).permit(:title, :expense_type, :amount)

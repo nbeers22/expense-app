@@ -3,13 +3,43 @@
 		<h1>Expense Tracker</h1>
 		<p class="lead">
 			<% unless user_signed_in?  %>
-				<%= link_to 'Click here', new_user_registration_path  %> to create an account or  <%= link_to 'click here',  new_user_session_path  %> to Sign in.
+				<%= link_to 'Click here', new_user_registration_path  %> to create an account or  <%= link_to 'click here',  new_user_session_path  %> to Sign in.</p>
 			<% else %>
-				Welcome <%= current_user.first_name.titleize %>!
+				Welcome <%= current_user.first_name.titleize %>!</p>
+				<p><%= link_to "Add an Activity", new_user_activity_path(current_user) %></p>
+				<div class="panel panel-default">
+				  <!-- Default panel contents -->
+				    <div class="panel-heading">Financial Activities</div>
+					<table class="activity-list">
+						<th>Date</th>
+						<th>Activity</th>
+						<th>Expense Type</th>
+						<th>Amount</th>
+						<th>Edit | Delete</th>
+						<% if @activities %>
+							<% @activities.each do |activity| %>
+							<tr>
+								<td><%= activity.created_at.strftime("%b %d, %Y") %></td>
+								<td><%= activity.title %></td>
+								<td><%= activity.expense_type %></td>
+								<td><%= number_to_currency(activity.amount) %></td>
+								<td>
+								<%= link_to edit_user_activity_path(current_user,activity) do %>
+									<button class="btn btn-warning">Edit</button>
+								<% end %>
+								<%= link_to user_activity_path(current_user,activity), method: :delete do  %>
+									<button class="btn btn-danger">Delete</button>
+								<% end %>
+								</td>
+							</tr>
+							<% end %>
+						<% end %>
+					</table>
+				</div>
+				<div class="total">
+					<p>Debits: <%= if @debits != nil then number_to_currency(@debits) else number_to_currency(0) end%></p>
+					<p>Credits: <%= if @credits != nil then number_to_currency(@credits) else number_to_currency(0) end%></p>
+				</div>
 			<% end %>
-		</p>
-		<p><%= link_to "Add an Activity", new_user_activity_path(current_user) %></p>
-
-		
 	</div>
 </div>
