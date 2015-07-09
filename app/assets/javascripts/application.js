@@ -21,6 +21,7 @@
 $(document).ready(function(){
 	slideTableDown();
 	slideTableUp();
+	changeDiffColor();
 });
 
 var slideTableDown = function(){
@@ -38,6 +39,18 @@ var slideTableUp = function(){
 		$(this).prev('span').removeClass('none');
 		$(this).parent().parent().find('table').velocity('transition.perspectiveDownOut');
 		$(this).parent().parent().parent().find('.total').velocity('transition.perspectiveUpOut');
-
 	});
+};
+
+var changeDiffColor = function(){
+	var value = $('span.difference').html();
+	value = Number(value.replace(/[^0-9\.-]+/g,""));
+	if (value < 0) {
+		$('span.difference').before('<span class="difference">(</span>').after('<span class="difference">)</span>');
+		$('span.difference').css({'color':'red'})
+	} else if (value == 0) {
+		$('span.difference').css({'color':'black'})
+	} else {
+		$('span.difference').css({'color':'green'})
+	}
 };

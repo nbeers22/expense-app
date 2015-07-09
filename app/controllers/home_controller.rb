@@ -78,7 +78,7 @@ class HomeController < ApplicationController
 
 	def business_debit
 		user = current_user
-		user.activities.where(expense_type: "Credit", category: "Business").pluck(:amount).inject(:+)
+		user.activities.where(expense_type: "Debit", category: "Business").pluck(:amount).inject(:+)
 	end
 
 	def business_credit
@@ -88,7 +88,7 @@ class HomeController < ApplicationController
 
 	def clothing_debit
 		user = current_user
-		user.activities.where(expense_type: "Credit", category: "Clothing").pluck(:amount).inject(:+)
+		user.activities.where(expense_type: "Debit", category: "Clothing").pluck(:amount).inject(:+)
 	end
 
 	def clothing_credit
@@ -98,7 +98,7 @@ class HomeController < ApplicationController
 
 	def food_debit
 		user = current_user
-		user.activities.where(expense_type: "Credit", category: "Food").pluck(:amount).inject(:+)
+		user.activities.where(expense_type: "Debit", category: "Food").pluck(:amount).inject(:+)
 	end
 
 	def food_credit
@@ -108,7 +108,7 @@ class HomeController < ApplicationController
 
 	def gas_debit
 		user = current_user
-		user.activities.where(expense_type: "Credit", category: "Gas").pluck(:amount).inject(:+)
+		user.activities.where(expense_type: "Debit", category: "Gas").pluck(:amount).inject(:+)
 	end
 
 	def gas_credit
@@ -118,7 +118,7 @@ class HomeController < ApplicationController
 
 	def home_debit
 		user = current_user
-		user.activities.where(expense_type: "Credit", category: "Home").pluck(:amount).inject(:+)
+		user.activities.where(expense_type: "Debit", category: "Home").pluck(:amount).inject(:+)
 	end
 
 	def home_credit
@@ -128,7 +128,7 @@ class HomeController < ApplicationController
 
 	def supplies_debit
 		user = current_user
-		user.activities.where(expense_type: "Credit", category: "Household Supplies").pluck(:amount).inject(:+)
+		user.activities.where(expense_type: "Debit", category: "Household Supplies").pluck(:amount).inject(:+)
 	end
 
 	def supplies_credit
@@ -138,7 +138,7 @@ class HomeController < ApplicationController
 
 	def medical_debit
 		user = current_user
-		user.activities.where(expense_type: "Credit", category: "Medical").pluck(:amount).inject(:+)
+		user.activities.where(expense_type: "Debit", category: "Medical").pluck(:amount).inject(:+)
 	end
 
 	def medical_credit
@@ -148,7 +148,7 @@ class HomeController < ApplicationController
 
 	def personal_debit
 		user = current_user
-		user.activities.where(expense_type: "Credit", category: "Personal").pluck(:amount).inject(:+)
+		user.activities.where(expense_type: "Debit", category: "Personal").pluck(:amount).inject(:+)
 	end
 
 	def personal_credit
@@ -158,7 +158,7 @@ class HomeController < ApplicationController
 
 	def pet_debit
 		user = current_user
-		user.activities.where(expense_type: "Credit", category: "Pets").pluck(:amount).inject(:+)
+		user.activities.where(expense_type: "Debit", category: "Pets").pluck(:amount).inject(:+)
 	end
 
 	def pet_credit
@@ -168,7 +168,7 @@ class HomeController < ApplicationController
 
 	def rent_debit
 		user = current_user
-		user.activities.where(expense_type: "Credit", category: "Rent/Mortgage").pluck(:amount).inject(:+)
+		user.activities.where(expense_type: "Debit", category: "Rent/Mortgage").pluck(:amount).inject(:+)
 	end
 
 	def rent_credit
@@ -178,7 +178,7 @@ class HomeController < ApplicationController
 
 	def vacation_debit
 		user = current_user
-		user.activities.where(expense_type: "Credit", category: "Vacation").pluck(:amount).inject(:+)
+		user.activities.where(expense_type: "Debit", category: "Vacation").pluck(:amount).inject(:+)
 	end
 
 	def vacation_credit
@@ -188,7 +188,7 @@ class HomeController < ApplicationController
 
 	def vehicle_debit
 		user = current_user
-		user.activities.where(expense_type: "Credit", category: "Vehicle").pluck(:amount).inject(:+)
+		user.activities.where(expense_type: "Debit", category: "Vehicle").pluck(:amount).inject(:+)
 	end
 
 	def vehicle_credit
@@ -198,7 +198,7 @@ class HomeController < ApplicationController
 
 	def other_debit
 		user = current_user
-		user.activities.where(expense_type: "Credit", category: "Other").pluck(:amount).inject(:+)
+		user.activities.where(expense_type: "Debit", category: "Other").pluck(:amount).inject(:+)
 	end
 
 	def other_credit
