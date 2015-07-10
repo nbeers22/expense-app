@@ -18,17 +18,11 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function(){
-	slideTableDown();
-	slideTableUp();
-	changeDiffColor();
-});
-
 var slideTableDown = function(){
 	$('span.plus').on('click',function(){
 		$(this).addClass('none');
 		$(this).next('span').removeClass('none');
-		$(this).parent().parent().find('table').velocity('transition.perspectiveDownIn');
+		$(this).parent().parent().find('table').velocity('transition.slideDownBigIn', {duration:1000});
 		$(this).parent().parent().parent().find('.total').velocity('transition.perspectiveUpIn');
 	});
 };
@@ -37,7 +31,7 @@ var slideTableUp = function(){
 	$('span.minus').on('click',function(){
 		$(this).addClass('none');
 		$(this).prev('span').removeClass('none');
-		$(this).parent().parent().find('table').velocity('transition.perspectiveDownOut');
+		$(this).parent().parent().find('table').velocity('transition.slideUpBigOut', {duration:1000});
 		$(this).parent().parent().parent().find('.total').velocity('transition.perspectiveUpOut');
 	});
 };
@@ -54,3 +48,12 @@ var changeDiffColor = function(){
 		$('span.difference').css({'color':'green'})
 	}
 };
+
+var ready = function(){
+	slideTableDown();
+	slideTableUp();
+	changeDiffColor();
+};
+
+$(document).ready(ready)
+$(document).on('page:load', ready);

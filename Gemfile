@@ -26,6 +26,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'activeadmin', github: 'activeadmin'
 gem 'velocityjs-rails'
+gem 'jquery-turbolinks'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

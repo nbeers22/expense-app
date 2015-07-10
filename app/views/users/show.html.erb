@@ -1,0 +1,271 @@
+<div class="row">
+	<div class="col-sm-12">
+		<h1><%= current_user.first_name.titleize %>'s Monthly Reports </h1>
+	</div>
+	<div class="col-sm-9 col-xs-12 no-pad">
+	<% if @july_2015 %>
+		<div class="col-sm-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="pull-left">July 2015</h3>
+					<span class="plus pull-right">+</span><span class="minus pull-right none">-</span>
+				</div>
+				<table class="activity-list none">
+					<thead>
+						<th>Date</th>
+						<th>Activity</th>
+						<th>Type</th>
+						<th>Category</th>
+						<th>Amount</th>
+						<th>Edit | Delete</th>
+					</thead>
+					<tbody>
+						<% @july_2015.each do |july2015| %>
+							<tr>
+								<td><%= july2015.created_at.strftime("%b %d, %Y") %></td>
+								<td><%= july2015.title %></td>
+								<td><%= july2015.expense_type %></td>
+								<td><%= july2015.category %></td>
+								<td><%= number_to_currency(july2015.amount) %></td>
+								<td>
+								<%= link_to edit_user_activity_path(current_user,july2015) do %>
+									<button class="btn btn-warning">Edit</button>
+								<% end %>
+								<%= link_to user_activity_path(current_user,july2015), method: :delete do  %>
+									<button class="btn btn-danger">Delete</button>
+								<% end %>
+								</td>
+							</tr>
+						<% end %>
+					</tbody>
+				</table>
+			</div>
+			<div class="total none">
+				<h3 class="total-head">Total</h3>
+				<p>Debits: <%= if @july_debit != nil then number_to_currency(@july_debit) else number_to_currency(0) end%></p>
+				<p>Credits: <%= if @july_credit != nil then number_to_currency(@july_credit) else number_to_currency(0) end%></p>
+			</div>
+		</div>
+	<% end %>
+	<% if @aug_2015 %>
+		<div class="col-sm-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="pull-left">August 2015</h3>
+					<span class="plus pull-right">+</span><span class="minus pull-right none">-</span>
+				</div>
+				<table class="activity-list none">
+					<thead>
+						<th>Date</th>
+						<th>Activity</th>
+						<th>Type</th>
+						<th>Category</th>
+						<th>Amount</th>
+						<th>Edit | Delete</th>
+					</thead>
+					<tbody>
+						<% @aug_2015.each do |aug2015| %>
+							<tr>
+								<td><%= aug2015.created_at.strftime("%b %d, %Y") %></td>
+								<td><%= aug2015.title %></td>
+								<td><%= aug2015.expense_type %></td>
+								<td><%= aug2015.category %></td>
+								<td><%= number_to_currency(aug2015.amount) %></td>
+								<td>
+								<%= link_to edit_user_activity_path(current_user,aug2015) do %>
+									<button class="btn btn-warning">Edit</button>
+								<% end %>
+								<%= link_to user_activity_path(current_user,aug2015), method: :delete do  %>
+									<button class="btn btn-danger">Delete</button>
+								<% end %>
+								</td>
+							</tr>
+						<% end %>
+					</tbody>
+				</table>
+			</div>
+			<div class="total none">
+				<h3 class="total-head">Total</h3>
+				<p>Debits: <%= if @aug_debit != nil then number_to_currency(@aug_debit) else number_to_currency(0) end%></p>
+				<p>Credits: <%= if @aug_credit != nil then number_to_currency(@aug_credit) else number_to_currency(0) end%></p>
+			</div>
+		</div>
+	<% end %>
+	<% if @sept_2015 %>
+		<div class="col-sm-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="pull-left">September 2015</h3>
+					<span class="plus pull-right">+</span><span class="minus pull-right none">-</span>
+				</div>
+				<table class="activity-list none">
+					<thead>
+						<th>Date</th>
+						<th>Activity</th>
+						<th>Type</th>
+						<th>Category</th>
+						<th>Amount</th>
+						<th>Edit | Delete</th>
+					</thead>
+					<tbody>
+						<% @sept_2015.each do |sept2015| %>
+							<tr>
+								<td><%= sept2015.created_at.strftime("%b %d, %Y") %></td>
+								<td><%= sept2015.title %></td>
+								<td><%= sept2015.expense_type %></td>
+								<td><%= sept2015.category %></td>
+								<td><%= number_to_currency(sept2015.amount) %></td>
+								<td>
+								<%= link_to edit_user_activity_path(current_user,sept2015) do %>
+									<button class="btn btn-warning">Edit</button>
+								<% end %>
+								<%= link_to user_activity_path(current_user,sept2015), method: :delete do  %>
+									<button class="btn btn-danger">Delete</button>
+								<% end %>
+								</td>
+							</tr>
+						<% end %>
+					</tbody>
+				</table>
+			</div>
+			<div class="total none">
+				<h3 class="total-head">Total</h3>
+				<p>Debits: <%= if @sept_debit != nil then number_to_currency(@sept_debit) else number_to_currency(0) end%></p>
+				<p>Credits: <%= if @sept_credit != nil then number_to_currency(@sept_credit) else number_to_currency(0) end%></p>
+			</div>
+		</div>
+	<% end %>
+	<% if @oct_2015 %>
+		<div class="col-sm-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="pull-left">October 2015</h3>
+					<span class="plus pull-right">+</span><span class="minus pull-right none">-</span>
+				</div>
+				<table class="activity-list none">
+					<thead>
+						<th>Date</th>
+						<th>Activity</th>
+						<th>Type</th>
+						<th>Category</th>
+						<th>Amount</th>
+						<th>Edit | Delete</th>
+					</thead>
+					<tbody>
+						<% @oct_2015.each do |oct2015| %>
+							<tr>
+								<td><%= oct2015.created_at.strftime("%b %d, %Y") %></td>
+								<td><%= oct2015.title %></td>
+								<td><%= oct2015.expense_type %></td>
+								<td><%= oct2015.category %></td>
+								<td><%= number_to_currency(oct2015.amount) %></td>
+								<td>
+								<%= link_to edit_user_activity_path(current_user,oct2015) do %>
+									<button class="btn btn-warning">Edit</button>
+								<% end %>
+								<%= link_to user_activity_path(current_user,oct2015), method: :delete do  %>
+									<button class="btn btn-danger">Delete</button>
+								<% end %>
+								</td>
+							</tr>
+						<% end %>
+					</tbody>
+				</table>
+			</div>
+			<div class="total none">
+				<h3 class="total-head">Total</h3>
+				<p>Debits: <%= if @oct_debit != nil then number_to_currency(@oct_debit) else number_to_currency(0) end%></p>
+				<p>Credits: <%= if @oct_credit != nil then number_to_currency(@oct_credit) else number_to_currency(0) end%></p>
+			</div>
+		</div>
+	<% end %>
+	<% if @nov_2015 %>
+		<div class="col-sm-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="pull-left">November 2015</h3>
+					<span class="plus pull-right">+</span><span class="minus pull-right none">-</span>
+				</div>
+				<table class="activity-list none">
+					<thead>
+						<th>Date</th>
+						<th>Activity</th>
+						<th>Type</th>
+						<th>Category</th>
+						<th>Amount</th>
+						<th>Edit | Delete</th>
+					</thead>
+					<tbody>
+						<% @nov_2015.each do |nov2015| %>
+							<tr>
+								<td><%= nov2015.created_at.strftime("%b %d, %Y") %></td>
+								<td><%= nov2015.title %></td>
+								<td><%= nov2015.expense_type %></td>
+								<td><%= nov2015.category %></td>
+								<td><%= number_to_currency(nov2015.amount) %></td>
+								<td>
+								<%= link_to edit_user_activity_path(current_user,nov2015) do %>
+									<button class="btn btn-warning">Edit</button>
+								<% end %>
+								<%= link_to user_activity_path(current_user,nov2015), method: :delete do  %>
+									<button class="btn btn-danger">Delete</button>
+								<% end %>
+								</td>
+							</tr>
+						<% end %>
+					</tbody>
+				</table>
+			</div>
+			<div class="total none">
+				<h3 class="total-head">Total</h3>
+				<p>Debits: <%= if @nov_debit != nil then number_to_currency(@nov_debit) else number_to_currency(0) end%></p>
+				<p>Credits: <%= if @nov_credit != nil then number_to_currency(@nov_credit) else number_to_currency(0) end%></p>
+			</div>
+		</div>
+	<% end %>
+	<% if @dec_2015 %>
+		<div class="col-sm-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="pull-left">December 2015</h3>
+					<span class="plus pull-right">+</span><span class="minus pull-right none">-</span>
+				</div>
+				<table class="activity-list none">
+					<thead>
+						<th>Date</th>
+						<th>Activity</th>
+						<th>Type</th>
+						<th>Category</th>
+						<th>Amount</th>
+						<th>Edit | Delete</th>
+					</thead>
+					<tbody>
+						<% @dec_2015.each do |dec2015| %>
+							<tr>
+								<td><%= dec2015.created_at.strftime("%b %d, %Y") %></td>
+								<td><%= dec2015.title %></td>
+								<td><%= dec2015.expense_type %></td>
+								<td><%= dec2015.category %></td>
+								<td><%= number_to_currency(dec2015.amount) %></td>
+								<td>
+								<%= link_to edit_user_activity_path(current_user,dec2015) do %>
+									<button class="btn btn-warning">Edit</button>
+								<% end %>
+								<%= link_to user_activity_path(current_user,dec2015), method: :delete do  %>
+									<button class="btn btn-danger">Delete</button>
+								<% end %>
+								</td>
+							</tr>
+						<% end %>
+					</tbody>
+				</table>
+			</div>
+			<div class="total none">
+				<h3 class="total-head">Total</h3>
+				<p>Debits: <%= if @dec_debit != nil then number_to_currency(@dec_debit) else number_to_currency(0) end%></p>
+				<p>Credits: <%= if @dec_credit != nil then number_to_currency(@dec_credit) else number_to_currency(0) end%></p>
+			</div>
+		</div>
+	<% end %>
+	</div>
+</div>

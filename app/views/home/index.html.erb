@@ -682,6 +682,9 @@
 				<% else %>
 					<p>Difference: <span class="difference"><%= number_to_currency(0) %></span></p>
 				<% end %>
+			<%= link_to user_path(current_user) do %>
+				<button class="btn btn-primary">Monthly Reports</button>
+			<% end %>
 		</div>
 	</div>
 			<% end %>
