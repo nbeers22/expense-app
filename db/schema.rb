@@ -61,39 +61,6 @@ ActiveRecord::Schema.define(version: 20150709140246) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
-  create_table "event_users", force: :cascade do |t|
-    t.integer  "event_id"
-    t.integer  "participant_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-  end
-
-  create_table "events", force: :cascade do |t|
-    t.string   "title"
-    t.time     "time"
-    t.integer  "host_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "spots"
-  end
-
-  create_table "events_participants", force: :cascade do |t|
-    t.integer  "event_id"
-    t.integer  "participant_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-  end
-
-  create_table "locations", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "rating"
-    t.integer  "event_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "locations", ["event_id"], name: "index_locations_on_event_id", using: :btree
-
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -114,17 +81,5 @@ ActiveRecord::Schema.define(version: 20150709140246) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  create_table "workplaces", force: :cascade do |t|
-    t.string   "name"
-    t.string   "location"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "workplaces", ["user_id"], name: "index_workplaces_on_user_id", using: :btree
-
   add_foreign_key "activities", "users"
-  add_foreign_key "locations", "events"
-  add_foreign_key "workplaces", "users"
 end

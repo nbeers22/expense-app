@@ -673,7 +673,15 @@
 				<p>Debits: <%= if @debits != nil then number_to_currency(@debits) else number_to_currency(0) end%></p>
 				<p>Credits: <%= if @credits != nil then number_to_currency(@credits) else number_to_currency(0) end%></p>
 				<hr>
-				<p>Difference: <span class="difference"><%= number_to_currency(@credits - @debits) %></span></p>
+				<% if @debits && @credits %>
+					<p>Difference: <span class="difference"><%= number_to_currency(@credits - @debits) %></span></p>
+				<% elsif @debits && !@credits%>
+					<p>Difference: <span class="difference"><%= number_to_currency(0 - @debits) %></span></p>
+				<% elsif @credits && !@debits %>
+					<p>Difference: <span class="difference"><%= number_to_currency(@credits) %></span></p>
+				<% else %>
+					<p>Difference: <span class="difference"><%= number_to_currency(0) %></span></p>
+				<% end %>
 		</div>
 	</div>
 			<% end %>
