@@ -46,12 +46,4 @@ class ActivitiesController < ApplicationController
 	def activities_params
 		params.require(:activity).permit(:title, :expense_type, :amount, :category)
 	end
-
-	def july_debit
-		@user.activities.where(expense_type: "Debit", created_at: Date.parse("2015-7-1").beginning_of_day..Date.parse("2015-7-31").end_of_day).pluck(:amount).inject(:+)
-	end
-
-	def july_credit
-		@user.activities.where(expense_type: "Credit", created_at: Date.parse("2015-7-1").beginning_of_day..Date.parse("2015-7-31").end_of_day).pluck(:amount).inject(:+)
-	end
 end

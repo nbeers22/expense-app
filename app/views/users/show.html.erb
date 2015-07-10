@@ -41,9 +41,9 @@
 				</table>
 			</div>
 			<div class="total none">
-				<h3 class="total-head">Total</h3>
-				<p>Debits: <%= if @july_debit != nil then number_to_currency(@july_debit) else number_to_currency(0) end%></p>
-				<p>Credits: <%= if @july_credit != nil then number_to_currency(@july_credit) else number_to_currency(0) end%></p>
+				<h3 class="total-head">Monthly Total</h3>
+				<p>Debits: <%= if @july_2015_debit != nil then number_to_currency(@july_2015_debit) else number_to_currency(0) end%></p>
+				<p>Credits: <%= if @july_2015_credit != nil then number_to_currency(@july_2015_credit) else number_to_currency(0) end%></p>
 			</div>
 		</div>
 	<% end %>
@@ -267,5 +267,8 @@
 			</div>
 		</div>
 	<% end %>
+	</div>
+	<div class="col-sm-3 no-pad">
+		<%= render ('home/yearly_total') %>
 	</div>
 </div>

@@ -34,6 +34,10 @@ class HomeController < ApplicationController
 			@household_supplies_debit = supplies_debit
 			@household_supplies_credit = supplies_credit
 
+			@jobs = user.activities.where(category: "Jobs")
+			@jobs_debit = job_debit
+			@jobs_credit = job_credit
+
 			@medicals = user.activities.where(category: "Medical")
 			@medicals_debit = medical_debit
 			@medicals_credit = medical_credit
@@ -124,6 +128,16 @@ class HomeController < ApplicationController
 	def home_credit
 		user = current_user
 		user.activities.where(expense_type: "Credit", category: "Home").pluck(:amount).inject(:+)
+	end
+
+	def job_debit
+		user = current_user
+		user.activities.where(expense_type: "Debit", category: "Jobs").pluck(:amount).inject(:+)
+	end
+
+	def job_credit
+		user = current_user
+		user.activities.where(expense_type: "Credit", category: "Jobs").pluck(:amount).inject(:+)
 	end
 
 	def supplies_debit

@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
 	def show
 		user = current_user
+		@debits = total_debit
+		@credits = total_credit
 		@july_2015 = user.activities.where(created_at: Date.parse("2015-7-1").beginning_of_day..Date.parse("2015-7-31").end_of_day)
 		@july_2015_debit = july_debit
 		@july_2015_credit = july_credit
@@ -86,5 +88,15 @@ class UsersController < ApplicationController
 	def dec_credit
 		user = current_user
 		user.activities.where(expense_type: "Credit", created_at: Date.parse("2015-7-1").beginning_of_day..Date.parse("2015-7-31").end_of_day).pluck(:amount).inject(:+)
+	end
+
+	def total_debit
+		user = current_user
+		user.activities.where(expense_type: "Debit").pluck(:amount).inject(:+)
+	end
+
+	def total_credit
+		user = current_user
+		user.activities.where(expense_type: "Credit").pluck(:amount).inject(:+)
 	end
 end

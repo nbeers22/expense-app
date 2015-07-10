@@ -321,6 +321,50 @@
 		<div class="col-sm-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">
+					<h3 class="pull-left">Job</h3>
+					<span class="plus pull-right">+</span><span class="minus pull-right none">-</span>
+				</div>
+				<table class="activity-list none">
+					<thead>
+						<th>Date</th>
+						<th>Activity</th>
+						<th>Type</th>
+						<th>Category</th>
+						<th>Amount</th>
+						<th>Edit | Delete</th>
+					</thead>
+					<tbody>
+					<% if @jobs %>
+						<% @jobs.each do |job| %>
+							<tr>
+								<td><%= job.created_at.strftime("%b %d, %Y") %></td>
+								<td><%= job.title %></td>
+								<td><%= job.expense_type %></td>
+								<td><%= job.category %></td>
+								<td><%= number_to_currency(job.amount) %></td>
+								<td>
+								<%= link_to edit_user_activity_path(current_user,job) do %>
+									<button class="btn btn-warning">Edit</button>
+								<% end %>
+								<%= link_to user_activity_path(current_user,job), method: :delete do  %>
+									<button class="btn btn-danger">Delete</button>
+								<% end %>
+								</td>
+							</tr>
+						<% end %>
+					<% end %>
+					</tbody>
+				</table>
+			</div>
+			<div class="total none">
+				<h3 class="total-head">Total</h3>
+				<p>Debits: <%= if @jobs_debit != nil then number_to_currency(@jobs_debit) else number_to_currency(0) end%></p>
+				<p>Credits: <%= if @jobs_credit != nil then number_to_currency(@jobs_credit) else number_to_currency(0) end%></p>
+			</div>
+		</div>
+		<div class="col-sm-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
 					<h3 class="pull-left">Medical</h3>
 					<span class="plus pull-right">+</span><span class="minus pull-right none">-</span>
 				</div>
@@ -668,24 +712,13 @@
 		</div>
 	</div>
 	<div class="col-sm-3 no-pad">
+		<%= render ('yearly_total') %>
+
 		<div class="inner-container">
-			<h3 class="total-head">Total</h3>
-				<p>Debits: <%= if @debits != nil then number_to_currency(@debits) else number_to_currency(0) end%></p>
-				<p>Credits: <%= if @credits != nil then number_to_currency(@credits) else number_to_currency(0) end%></p>
-				<hr>
-				<% if @debits && @credits %>
-					<p>Difference: <span class="difference"><%= number_to_currency(@credits - @debits) %></span></p>
-				<% elsif @debits && !@credits%>
-					<p>Difference: <span class="difference"><%= number_to_currency(0 - @debits) %></span></p>
-				<% elsif @credits && !@debits %>
-					<p>Difference: <span class="difference"><%= number_to_currency(@credits) %></span></p>
-				<% else %>
-					<p>Difference: <span class="difference"><%= number_to_currency(0) %></span></p>
-				<% end %>
 			<%= link_to user_path(current_user) do %>
-				<button class="btn btn-primary">Monthly Reports</button>
+				<button class="btn btn-primary">View Monthly Reports</button>
 			<% end %>
 		</div>
 	</div>
-			<% end %>
+	<% end %>
 </div>
