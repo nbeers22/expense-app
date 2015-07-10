@@ -1,18 +1,48 @@
 <div class="row">
-	<div class="col-sm-12">
-		<h1>Expense Tracker</h1>
-		<p class="lead">
-			<% unless user_signed_in?  %>
-				<%= link_to 'Click here', new_user_registration_path  %> to create an account or  <%= link_to 'click here',  new_user_session_path  %> to Sign in.
-			<% else %>
-				Welcome <%= current_user.first_name.titleize %>!
-			<% end %>
-		</p>
-		<p><%= link_to "+New Financial Activity", new_user_activity_path(current_user) %></p>
-		<div class="row">
-			<div class="col-md-6 col-md-offset-2" id="post-form" style="display:none;"></div>
+	<div class="col-sm-9 col-xs-12 no-pad">
+	<% if @july_2015 %>
+		<div class="col-sm-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="pull-left">July 2015</h3>
+					<span class="plus pull-right">+</span><span class="minus pull-right none">-</span>
+				</div>
+				<table class="activity-list none">
+					<thead>
+						<th>Date</th>
+						<th>Activity</th>
+						<th>Type</th>
+						<th>Category</th>
+						<th>Amount</th>
+						<th>Edit | Delete</th>
+					</thead>
+					<tbody>
+						<% @july_2015.each do |july2105| %>
+							<tr>
+								<td><%= july2015.created_at.strftime("%b %d, %Y") %></td>
+								<td><%= july2015.title %></td>
+								<td><%= july2015.expense_type %></td>
+								<td><%= july2015.category %></td>
+								<td><%= number_to_currency(july2015.amount) %></td>
+								<td>
+								<%= link_to edit_user_activity_path(current_user,july2015) do %>
+									<button class="btn btn-warning">Edit</button>
+								<% end %>
+								<%= link_to user_activity_path(current_user,july2015), method: :delete do  %>
+									<button class="btn btn-danger">Delete</button>
+								<% end %>
+								</td>
+							</tr>
+						<% end %>
+					</tbody>
+				</table>
+			</div>
+			<div class="total none">
+				<h3 class="total-head">Total</h3>
+				<p>Debits: <%= if @july_debit != nil then number_to_currency(@july_debit) else number_to_currency(0) end%></p>
+				<p>Credits: <%= if @july_credit != nil then number_to_currency(@july_credit) else number_to_currency(0) end%></p>
+			</div>
 		</div>
-
-		
+	<% end %>
 	</div>
 </div>
