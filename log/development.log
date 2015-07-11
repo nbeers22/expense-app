@@ -1,0 +1,238 @@
+
+
+Started GET "/" for ::1 at 2015-07-10 21:25:25 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.7ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2[0m  [["user_id", 2], ["expense_type", "Debit"]]
+  [1m[35m (0.4ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2  [["user_id", 2], ["expense_type", "Credit"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Debit"], ["category", "Bills"]]
+  [1m[35m (0.4ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Credit"], ["category", "Bills"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Debit"], ["category", "Business"]]
+  [1m[35m (0.4ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Credit"], ["category", "Business"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Debit"], ["category", "Clothing"]]
+  [1m[35m (0.4ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Credit"], ["category", "Clothing"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Debit"], ["category", "Food"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Credit"], ["category", "Food"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Debit"], ["category", "Gas"]]
+  [1m[35m (0.3ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Debit"], ["category", "Gas"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Debit"], ["category", "Household Supplies"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Credit"], ["category", "Household Supplies"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Debit"], ["category", "Jobs"]]
+  [1m[35m (0.3ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Credit"], ["category", "Jobs"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Debit"], ["category", "Medical"]]
+  [1m[35m (0.3ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Credit"], ["category", "Medical"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Debit"], ["category", "Personal"]]
+  [1m[35m (0.5ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Credit"], ["category", "Personal"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Debit"], ["category", "Pets"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Credit"], ["category", "Pets"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Debit"], ["category", "Rent/Mortgage"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Credit"], ["category", "Rent/Mortgage"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Debit"], ["category", "Vacation"]]
+  [1m[35m (0.3ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Credit"], ["category", "Vacation"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Debit"], ["category", "Vehicle"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Credit"], ["category", "Vehicle"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Debit"], ["category", "Other"]]
+  [1m[35m (0.4ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Credit"], ["category", "Other"]]
+  [1m[36mActivity Load (0.4ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 2], ["category", "Bills"]]
+  [1m[35mActivity Load (1.2ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 2], ["category", "Business"]]
+  [1m[36mActivity Load (0.4ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 2], ["category", "Clothing"]]
+  [1m[35mActivity Load (0.8ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 2], ["category", "Food"]]
+  [1m[36mActivity Load (0.4ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 2], ["category", "Gas"]]
+  [1m[35mActivity Load (0.3ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 2], ["category", "Home Repair"]]
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 2], ["category", "Household Supplies"]]
+  [1m[35mActivity Load (0.4ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 2], ["category", "Jobs"]]
+  [1m[36mActivity Load (0.3ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 2], ["category", "Medical"]]
+  [1m[35mActivity Load (0.5ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 2], ["category", "Personal"]]
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 2], ["category", "Pets"]]
+  [1m[35mActivity Load (0.3ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 2], ["category", "Rent/Mortgage"]]
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 2], ["category", "Vacation"]]
+  [1m[35mActivity Load (0.2ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 2], ["category", "Vehicle"]]
+  [1m[36mActivity Load (0.3ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 2], ["category", "Other"]]
+  [1m[35mActivity Load (0.3ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1  [["user_id", 2]]
+  Rendered home/_yearly_total.html.erb (2.4ms)
+  Rendered home/index.html.erb within layouts/application (117.3ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 2456ms (Views: 2266.7ms | ActiveRecord: 24.4ms)
+
+
+Started GET "/assets/main.self-93946fd45b04752ebd34c71d6c634e5206993d0e3ec9934f562b5251d4bb9042.css?body=1" for ::1 at 2015-07-10 21:25:28 -0400
+
+
+Started GET "/assets/application.self-71cc9607a6242a4034f1e127a82e23e62cac39668a79db26cbf5029434cf83a1.js?body=1" for ::1 at 2015-07-10 21:25:28 -0400
+
+
+Started GET "/" for ::1 at 2015-07-10 21:25:29 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2  [["user_id", 2], ["expense_type", "Debit"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2[0m  [["user_id", 2], ["expense_type", "Credit"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Bills"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Bills"]]
+  [1m[35m (0.1ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Business"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Business"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Clothing"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Clothing"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Food"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Food"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Gas"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Gas"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Household Supplies"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Household Supplies"]]
+  [1m[35m (0.1ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Jobs"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Jobs"]]
+  [1m[35m (0.1ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Medical"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Medical"]]
+  [1m[35m (0.1ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Personal"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Personal"]]
+  [1m[35m (0.1ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Pets"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Pets"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Rent/Mortgage"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Rent/Mortgage"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Vacation"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Vacation"]]
+  [1m[35m (0.1ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Vehicle"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Vehicle"]]
+  [1m[35m (0.1ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Other"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Other"]]
+  [1m[35mActivity Load (0.3ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 2], ["category", "Bills"]]
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 2], ["category", "Business"]]
+  [1m[35mActivity Load (0.2ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 2], ["category", "Clothing"]]
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 2], ["category", "Food"]]
+  [1m[35mActivity Load (0.2ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 2], ["category", "Gas"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 2], ["category", "Home Repair"]]
+  [1m[35mActivity Load (0.2ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 2], ["category", "Household Supplies"]]
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 2], ["category", "Jobs"]]
+  [1m[35mActivity Load (0.5ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 2], ["category", "Medical"]]
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 2], ["category", "Personal"]]
+  [1m[35mActivity Load (0.2ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 2], ["category", "Pets"]]
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 2], ["category", "Rent/Mortgage"]]
+  [1m[35mActivity Load (0.2ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 2], ["category", "Vacation"]]
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 2], ["category", "Vehicle"]]
+  [1m[35mActivity Load (0.3ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 2], ["category", "Other"]]
+  [1m[36mActivity Load (0.3ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered home/_yearly_total.html.erb (0.8ms)
+  Rendered home/index.html.erb within layouts/application (27.9ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 288ms (Views: 252.1ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/users/2" for ::1 at 2015-07-10 21:25:34 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.6ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2[0m  [["user_id", 2], ["expense_type", "Debit"]]
+  [1m[35m (1.3ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2  [["user_id", 2], ["expense_type", "Credit"]]
+  [1m[36m (0.7ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')[0m  [["user_id", 2], ["expense_type", "Debit"]]
+  [1m[35m (0.5ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')  [["user_id", 2], ["expense_type", "Credit"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')[0m  [["user_id", 2], ["expense_type", "Debit"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')  [["user_id", 2], ["expense_type", "Credit"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')[0m  [["user_id", 2], ["expense_type", "Debit"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')  [["user_id", 2], ["expense_type", "Credit"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')[0m  [["user_id", 2], ["expense_type", "Debit"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')  [["user_id", 2], ["expense_type", "Credit"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')[0m  [["user_id", 2], ["expense_type", "Debit"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')  [["user_id", 2], ["expense_type", "Credit"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')[0m  [["user_id", 2], ["expense_type", "Debit"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')  [["user_id", 2], ["expense_type", "Credit"]]
+  [1m[36mActivity Load (0.6ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')[0m  [["user_id", 2]]
+  [1m[35mActivity Load (0.3ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND ("activities"."created_at" BETWEEN '2015-08-01 00:00:00.000000' AND '2015-08-31 23:59:59.999999')  [["user_id", 2]]
+  [1m[36mActivity Load (0.3ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND ("activities"."created_at" BETWEEN '2015-09-01 00:00:00.000000' AND '2015-09-30 23:59:59.999999')[0m  [["user_id", 2]]
+  [1m[35mActivity Load (0.3ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND ("activities"."created_at" BETWEEN '2015-10-01 00:00:00.000000' AND '2015-10-31 23:59:59.999999')  [["user_id", 2]]
+  [1m[36mActivity Load (0.3ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND ("activities"."created_at" BETWEEN '2015-11-01 00:00:00.000000' AND '2015-11-30 23:59:59.999999')[0m  [["user_id", 2]]
+  [1m[35mActivity Load (0.2ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND ("activities"."created_at" BETWEEN '2015-12-01 00:00:00.000000' AND '2015-12-31 23:59:59.999999')  [["user_id", 2]]
+  Rendered home/_yearly_total.html.erb (1.5ms)
+  Rendered users/show.html.erb within layouts/application (22.5ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+Completed 200 OK in 438ms (Views: 329.9ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for ::1 at 2015-07-10 21:26:27 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2  [["user_id", 2], ["expense_type", "Debit"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2[0m  [["user_id", 2], ["expense_type", "Credit"]]
+  [1m[35m (0.3ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Bills"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Bills"]]
+  [1m[35m (0.3ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Business"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Business"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Clothing"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Clothing"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Food"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Food"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Gas"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Gas"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Gas"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Household Supplies"]]
+  [1m[36m (1.1ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Household Supplies"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Jobs"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Jobs"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Medical"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Medical"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Personal"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Personal"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Pets"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Pets"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Rent/Mortgage"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Rent/Mortgage"]]
+  [1m[35m (0.1ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Vacation"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Vacation"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Vehicle"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Vehicle"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3  [["user_id", 2], ["expense_type", "Debit"], ["category", "Other"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND "activities"."category" = $3[0m  [["user_id", 2], ["expense_type", "Credit"], ["category", "Other"]]
+  [1m[35mActivity Load (0.4ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 2], ["category", "Bills"]]
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 2], ["category", "Business"]]
+  [1m[35mActivity Load (0.2ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 2], ["category", "Clothing"]]
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 2], ["category", "Food"]]
+  [1m[35mActivity Load (0.2ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 2], ["category", "Gas"]]
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 2], ["category", "Home Repair"]]
+  [1m[35mActivity Load (0.2ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 2], ["category", "Household Supplies"]]
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 2], ["category", "Jobs"]]
+  [1m[35mActivity Load (0.3ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 2], ["category", "Medical"]]
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 2], ["category", "Personal"]]
+  [1m[35mActivity Load (0.2ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 2], ["category", "Pets"]]
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 2], ["category", "Rent/Mortgage"]]
+  [1m[35mActivity Load (0.2ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 2], ["category", "Vacation"]]
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2[0m  [["user_id", 2], ["category", "Vehicle"]]
+  [1m[35mActivity Load (0.1ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."category" = $2  [["user_id", 2], ["category", "Other"]]
+  [1m[36mActivity Load (0.3ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered home/_yearly_total.html.erb (0.8ms)
+  Rendered home/index.html.erb within layouts/application (57.3ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 365ms (Views: 315.5ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/users/2" for ::1 at 2015-07-10 21:26:37 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2[0m  [["user_id", 2], ["expense_type", "Debit"]]
+  [1m[35m (0.1ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2  [["user_id", 2], ["expense_type", "Credit"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')[0m  [["user_id", 2], ["expense_type", "Debit"]]
+  [1m[35m (0.2ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')  [["user_id", 2], ["expense_type", "Credit"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')[0m  [["user_id", 2], ["expense_type", "Debit"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')  [["user_id", 2], ["expense_type", "Credit"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')[0m  [["user_id", 2], ["expense_type", "Debit"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')  [["user_id", 2], ["expense_type", "Credit"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')[0m  [["user_id", 2], ["expense_type", "Debit"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')  [["user_id", 2], ["expense_type", "Credit"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')[0m  [["user_id", 2], ["expense_type", "Debit"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')  [["user_id", 2], ["expense_type", "Credit"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')[0m  [["user_id", 2], ["expense_type", "Debit"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "activities"."amount" FROM "activities" WHERE "activities"."user_id" = $1 AND "activities"."expense_type" = $2 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')  [["user_id", 2], ["expense_type", "Credit"]]
+  [1m[36mActivity Load (0.3ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND ("activities"."created_at" BETWEEN '2015-07-01 00:00:00.000000' AND '2015-07-31 23:59:59.999999')[0m  [["user_id", 2]]
+  [1m[35mActivity Load (0.5ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND ("activities"."created_at" BETWEEN '2015-08-01 00:00:00.000000' AND '2015-08-31 23:59:59.999999')  [["user_id", 2]]
+  [1m[36mActivity Load (0.3ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND ("activities"."created_at" BETWEEN '2015-09-01 00:00:00.000000' AND '2015-09-30 23:59:59.999999')[0m  [["user_id", 2]]
+  [1m[35mActivity Load (0.2ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND ("activities"."created_at" BETWEEN '2015-10-01 00:00:00.000000' AND '2015-10-31 23:59:59.999999')  [["user_id", 2]]
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND ("activities"."created_at" BETWEEN '2015-11-01 00:00:00.000000' AND '2015-11-30 23:59:59.999999')[0m  [["user_id", 2]]
+  [1m[35mActivity Load (0.2ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1 AND ("activities"."created_at" BETWEEN '2015-12-01 00:00:00.000000' AND '2015-12-31 23:59:59.999999')  [["user_id", 2]]
+  Rendered home/_yearly_total.html.erb (0.8ms)
+  Rendered users/show.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 284ms (Views: 264.7ms | ActiveRecord: 3.3ms)
